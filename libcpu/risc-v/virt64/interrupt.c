@@ -18,7 +18,7 @@
 struct rt_irq_desc irq_desc[MAX_HANDLERS];
 #ifdef RT_USING_SMP
 struct rt_irq_desc ipi_desc[RT_MAX_IPI];
-uint8_t ipi_vectors[RT_CPUS_NR] = {0};
+uint8_t ipi_vectors[RT_CPUS_NR] = { 0 };
 #endif
 
 static rt_isr_handler_t rt_hw_interrupt_handle(rt_uint32_t vector, void *param)
@@ -57,11 +57,11 @@ void rt_hw_interrupt_umask(int vector)
  * @param old_handler the old interrupt service routine
  */
 rt_isr_handler_t rt_hw_interrupt_install(int vector, rt_isr_handler_t handler,
-        void *param, const char *name)
+                                         void *param, const char *name)
 {
     rt_isr_handler_t old_handler = RT_NULL;
 
-    if(vector < MAX_HANDLERS)
+    if (vector < MAX_HANDLERS)
     {
         old_handler = irq_desc[vector].handler;
         if (handler != RT_NULL)
@@ -146,7 +146,6 @@ void rt_hw_spin_lock(rt_hw_spinlock_t *lock)
         if (owner == ticket)
             break;
         /* TODO: low-power wait for interrupt while spinning */
-        // __asm__ volatile("wfi" ::: "memory");
     }
 
     /* Ensure all following memory accesses are ordered after acquiring the lock */
@@ -183,17 +182,17 @@ void rt_hw_ipi_init(void)
     {
         ipi_desc[idx].handler = RT_NULL;
         ipi_desc[idx].param = RT_NULL;
-        #ifdef RT_USING_INTERRUPT_INFO
-            rt_snprintf(ipi_desc[idx].name, RT_NAME_MAX - 1, "default");
-            ipi_desc[idx].counter = 0;
-        #endif
+#ifdef RT_USING_INTERRUPT_INFO
+        rt_snprintf(ipi_desc[idx].name, RT_NAME_MAX - 1, "default");
+        ipi_desc[idx].counter = 0;
+#endif
     }
     set_csr(sie, SIP_SSIP);
 }
 
 void rt_hw_ipi_handler_install(int ipi_vector, rt_isr_handler_t ipi_isr_handler)
 {
-    if(ipi_vector < RT_MAX_IPI)
+    if (ipi_vector < RT_MAX_IPI)
     {
         if (ipi_isr_handler != RT_NULL)
         {
