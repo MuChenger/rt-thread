@@ -13,14 +13,14 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <board.h>
-
+#include "exmc_sdram.h"
 /* defined the LED1 pin: PE3 */
 #define LED1_PIN GET_PIN(E, 3)
 
 int main(void)
-{
+{	
     int count = 1;
-
+		exmc_synchronous_dynamic_ram_init(EXMC_SDRAM_DEVICE0);
     /* set LED1 pin mode to output */
     rt_pin_mode(LED1_PIN, PIN_MODE_OUTPUT);
 
