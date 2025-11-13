@@ -136,6 +136,11 @@
 /* DFS: device virtual file system */
 
 /* end of DFS: device virtual file system */
+#define RT_USING_FAL
+#define FAL_USING_DEBUG
+#define FAL_PART_HAS_TABLE_CFG
+#define FAL_USING_SFUD_PORT
+#define FAL_USING_NOR_FLASH_DEV_NAME "gd25q_spi5"
 
 /* Device Drivers */
 
@@ -146,6 +151,10 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_SPI
+#define RT_USING_SFUD
+#define RT_SFUD_USING_SFDP
+#define RT_SFUD_USING_FLASH_INFO_TABLE
+#define RT_SFUD_SPI_MAX_HZ 50000000
 #define RT_USING_TOUCH
 #define RT_TOUCH_PIN_IRQ
 #define RT_USING_PIN
@@ -186,6 +195,20 @@
 
 /* Utilities */
 
+#define RT_USING_ULOG
+#define ULOG_OUTPUT_LVL_I
+#define ULOG_OUTPUT_LVL 6
+#define ULOG_ASSERT_ENABLE
+#define ULOG_LINE_BUF_SIZE 128
+
+/* log format */
+
+#define ULOG_USING_COLOR
+#define ULOG_OUTPUT_TIME
+#define ULOG_OUTPUT_LEVEL
+#define ULOG_OUTPUT_TAG
+/* end of log format */
+#define ULOG_BACKEND_USING_CONSOLE
 /* end of Utilities */
 
 /* Using USB legacy version */
@@ -338,20 +361,6 @@
 
 /* touch drivers */
 
-#define PKG_USING_XPT2046_TOUCH
-#define PKG_USING_XPT2046_TOUCH_LATEST_VERSION
-#define PKG_XPT2046_USING_KCONFIG
-#define PKG_XPT2046_SPI_BUS "spi4"
-#define PKG_XPT2046_CS_GPIO 
-#define PKG_XPT2046_CS_PIN 
-#define PKG_XPT2046_IRQ_GPIO 
-#define PKG_XPT2046_IRQ_PIN 
-#define PKG_XPT2046_RANGE_X 480
-#define PKG_XPT2046_RANGE_Y 272
-#define PKG_XPT2046_MIN_RAW_X 221
-#define PKG_XPT2046_MIN_RAW_Y 228
-#define PKG_XPT2046_MAX_RAW_X 3823
-#define PKG_XPT2046_MAX_RAW_Y 3743
 /* end of touch drivers */
 /* end of peripheral libraries and drivers */
 
@@ -439,6 +448,7 @@
 #define BSP_USING_UART0
 #define BSP_USING_SPI
 #define BSP_USING_SPI4
+#define BSP_USING_SPI5
 #define BSP_USING_SDRAM
 #define BSP_USING_GD_DBG
 /* end of On-chip Peripheral Drivers */
