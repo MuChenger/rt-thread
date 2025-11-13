@@ -234,24 +234,74 @@ void XPT2046_convert_cood(uint16_t touch_x, uint16_t touch_y, uint16_t *screen_x
 }
 
 
-/* 读取触摸屏坐标 */
+/**
+ * @brief 读取触摸屏坐标 - 高精度采样版本
+ * 采集5个样本，排序后取中位数，确保数据稳定性
+ * @param x: 屏幕X坐标输出指针
+ * @param y: 屏幕Y坐标输出指针
+ */
 void XPT2046_read_cood(uint16_t *x, uint16_t *y)
 {
     uint16_t raw_x, raw_y;
     
-    // 读取原始坐标
-    raw_x = XPT2046_readXY(0x90);
-    raw_y = XPT2046_readXY(0xD0);
-
-    /* 打印坐标 */
-//    rt_kprintf("x = %d, y = %d\r\n", *x, *y);
-     // 转换为屏幕坐标
-    XPT2046_convert_cood(raw_x, raw_y, x, y);
+    if(x == NULL || y == NULL)
+    {
+        return;
+    }
     
-    /* 打印坐标 */
-//    rt_kprintf("Raw: X=%d, Y=%d -> Screen: X=%d, Y=%d\r\n", raw_x, raw_y, *x, *y);
-  
-
+    {
+        uint16_t buf[5];
+        uint8_t i, j;
+        
+        for(i = 0; i < 5; ++i)
+        {
+            buf[i] = XPT2046_readXY(0x90);
+        }
+        
+        for(i = 0; i < 4; ++i)
+        {
+            for(j = i + 1; j < 5; ++j)
+            {
+                if(buf[i] > buf[j])
+                {
+                    uint16_t temp = buf[i];
+                    buf[i] = buf[j];
+                    buf[j] = temp;
+                }
+            }
+        }
+        
+        raw_x = buf[2];
+        delay_5us();
+    }
+    
+    {
+        uint16_t buf[5];
+        uint8_t i, j;
+        
+        for(i = 0; i < 5; ++i)
+        {
+            buf[i] = XPT2046_readXY(0xD0);
+        }
+        
+        for(i = 0; i < 4; ++i)
+        {
+            for(j = i + 1; j < 5; ++j)
+            {
+                if(buf[i] > buf[j])
+                {
+                    uint16_t temp = buf[i];
+                    buf[i] = buf[j];
+                    buf[j] = temp;
+                }
+            }
+        }
+        
+        raw_y = buf[2];
+        delay_5us();
+    }
+    
+    XPT2046_convert_cood(raw_x, raw_y, x, y);
 }
 
 // 初始化XPT2046触摸屏

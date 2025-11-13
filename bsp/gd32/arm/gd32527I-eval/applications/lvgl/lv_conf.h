@@ -34,7 +34,7 @@
 
 #endif
 
-
+#define LV_USE_QRCODE 1  // 启用二维码组件
 #define LV_USE_DEMO_BENCHMARK       1
 
 

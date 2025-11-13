@@ -145,6 +145,9 @@
 #define RT_USING_SERIAL_V1
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_SPI
+#define RT_USING_TOUCH
+#define RT_TOUCH_PIN_IRQ
 #define RT_USING_PIN
 /* end of Device Drivers */
 
@@ -335,6 +338,20 @@
 
 /* touch drivers */
 
+#define PKG_USING_XPT2046_TOUCH
+#define PKG_USING_XPT2046_TOUCH_LATEST_VERSION
+#define PKG_XPT2046_USING_KCONFIG
+#define PKG_XPT2046_SPI_BUS "spi4"
+#define PKG_XPT2046_CS_GPIO 
+#define PKG_XPT2046_CS_PIN 
+#define PKG_XPT2046_IRQ_GPIO 
+#define PKG_XPT2046_IRQ_PIN 
+#define PKG_XPT2046_RANGE_X 480
+#define PKG_XPT2046_RANGE_Y 272
+#define PKG_XPT2046_MIN_RAW_X 221
+#define PKG_XPT2046_MIN_RAW_Y 228
+#define PKG_XPT2046_MAX_RAW_X 3823
+#define PKG_XPT2046_MAX_RAW_Y 3743
 /* end of touch drivers */
 /* end of peripheral libraries and drivers */
 
@@ -420,6 +437,8 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART0
+#define BSP_USING_SPI
+#define BSP_USING_SPI4
 #define BSP_USING_SDRAM
 #define BSP_USING_GD_DBG
 /* end of On-chip Peripheral Drivers */

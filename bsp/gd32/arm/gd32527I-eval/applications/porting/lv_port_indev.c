@@ -16,7 +16,8 @@
 /*********************
  *      DEFINES
  *********************/
-
+#include <rtdevice.h>
+#include "drv_xpt2046.h"
 /**********************
  *      TYPEDEFS
  **********************/
@@ -66,20 +67,48 @@ void lv_port_indev_init(void)
 /*------------------
  * Touchpad
  * -----------------*/
-
+static volatile rt_device_t touch;
 /*Initialize your touchpad*/
 static void touchpad_init(void)
 {
     /*Your code comes here*/
-    XPT2046_init();
-}
+//	  touch = rt_device_find("xpt0");
 
+//    if (touch == RT_NULL)
+//    {
+//        rt_kprintf("can't find device:%s\n", "xpt0");
+//        while (1);
+//    }
+//    if (rt_device_open(touch, RT_DEVICE_FLAG_INT_RX) != RT_EOK)
+//    {
+//        rt_kprintf("open device failed!");
+//        while (1);
+//    }
+		
+		XPT2046_init();
+}
+		
+volatile struct rt_touch_data read_data;
 /*Will be called by the library to read the touchpad*/
 static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
 {
     static uint16_t last_x = 0;
     static uint16_t last_y = 0;
-//    XPT2046_read(indev_drv,data);
+	
+//	  rt_memset(&read_data, 0, sizeof(struct rt_touch_data));
+
+//		if (rt_device_read(touch, 0, &read_data, 1) == 1)
+//		{
+//			data->state = LV_INDEV_STATE_PR;
+//		}
+//		else
+//		{
+//			data->state = LV_INDEV_STATE_REL;
+//		}
+//		
+//		data->point.x = read_data.x_coordinate;
+//    data->point.y = read_data.y_coordinate;
+
 		if(XPT2046_touch_press()) 
 		{
 			XPT2046_read_cood(&last_x, &last_y);
@@ -91,6 +120,8 @@ static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
     /*Set the last pressed coordinates*/
     data->point.x = last_x;
     data->point.y = last_y;
+//				
+//		rt_kprintf("point.x: %d point.y: %d \r\n", data->point.x, data->point.y);
 		
 }
 

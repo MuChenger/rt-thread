@@ -9,13 +9,14 @@
  * 2022-05-10     Meco Man      improve rt-thread initialization process
  */
 #include <lvgl.h>
-
+#include "ui.h"
 void lv_user_gui_init(void)
 {
-    extern void lv_demo_benchmark(void);
-    lv_demo_benchmark();
-    
-    extern void lv_demo_music(void);
-    lv_demo_music();
-
+//    extern void lv_demo_benchmark(void);
+//    lv_demo_benchmark();
+//    
+//    extern void lv_demo_music(void);
+//    lv_demo_music();
+	ui_init();
+ 
 }

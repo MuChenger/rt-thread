@@ -133,18 +133,18 @@ static const struct gd32_spi spi_bus_obj[] = {
         SPI4,
         "spi4",
         RCU_SPI4,
-        RCU_GPIOF,
-        RCU_GPIOF,
+        RCU_GPIOH,
+        RCU_GPIOH,
         RCU_GPIOF,
         &spi_bus4,
-        GPIOF,
-        GPIOF,
+        GPIOH,
+        GPIOH,
         GPIOF,
 #if defined (SOC_SERIES_GD32F4xx) || defined (SOC_SERIES_GD32H7xx) || (defined SOC_SERIES_GD32F5xx)
         GPIO_AF_5,
 #endif
+        GPIO_PIN_6,
         GPIO_PIN_7,
-        GPIO_PIN_8,
         GPIO_PIN_9,
 
     },
