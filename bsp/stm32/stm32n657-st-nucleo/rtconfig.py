@@ -17,7 +17,7 @@ if os.getenv('RTT_ROOT'):
 # EXEC_PATH is the compiler execute path, for example, CodeSourcery, Keil MDK, IAR
 if  CROSS_TOOL == 'gcc':
     PLATFORM    = 'gcc'
-    EXEC_PATH   = r'C:\Users\XXYYZZ'
+    EXEC_PATH   = r'D:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin'
 elif CROSS_TOOL == 'keil':
     PLATFORM    = 'armcc'
     EXEC_PATH   = r'C:/Keil_v5'
@@ -25,8 +25,8 @@ elif CROSS_TOOL == 'iar':
     PLATFORM    = 'iccarm'
     EXEC_PATH   = r'C:/Program Files (x86)/IAR Systems/Embedded Workbench 8.3'
 
-if os.getenv('RTT_EXEC_PATH'):
-    EXEC_PATH = os.getenv('RTT_EXEC_PATH')
+# if os.getenv('RTT_EXEC_PATH'):
+#     EXEC_PATH = os.getenv('RTT_EXEC_PATH')
 
 BUILD = 'debug'
 
@@ -43,10 +43,14 @@ if PLATFORM == 'gcc':
     OBJDUMP = PREFIX + 'objdump'
     OBJCPY = PREFIX + 'objcopy'
 
-    DEVICE = ' -mcpu=cortex-m7 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections'
-    CFLAGS = DEVICE + ' -Dgcc'
-    AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp -Wa,-mimplicit-it=thumb '
-    LFLAGS = DEVICE + ' -Wl,--gc-sections,-Map=rtthread.map,-cref,-u,Reset_Handler -T board/linker_scripts/link.lds'
+    DEVICE = ' -mcpu=cortex-m55 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb '
+    CFLAGS = DEVICE + ' -Dgcc' + ' -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx ' 
+    CFLAGS += ' -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP '
+    
+    AFLAGS = + DEVICE + '-g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -Wa,-mimplicit-it=thumb '
+    
+    LFLAGS = DEVICE + ' -Wl,--gc-sections,-Map=rtthread.map,-cref,-u,Reset_Handler -T board/N6/FSBL/STM32N657X0HXQ_AXISRAM2_fsbl.ld'
+    LFLAGS += '-Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o -Wl,--start-group -lc -lm -Wl,--end-group'
 
     CPATH = ''
     LPATH = ''
@@ -58,7 +62,7 @@ if PLATFORM == 'gcc':
         CFLAGS += ' -O2'
 
     CXXFLAGS = CFLAGS 
-    CFLAGS += ' -std=c99'
+    CFLAGS += ' -std=gnu11'
 
     POST_ACTION = OBJCPY + ' -O binary $TARGET rtthread.bin\n' + SIZE + ' $TARGET \n'
 
