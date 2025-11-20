@@ -175,47 +175,47 @@ void rt_hw_us_delay(rt_uint32_t us)
  */
 rt_weak void rt_hw_board_init(void)
 {
-#ifdef BSP_SCB_ENABLE_I_CACHE
-    /* Enable I-Cache---------------------------------------------------------*/
-    SCB_EnableICache();
-#endif
+// #ifdef BSP_SCB_ENABLE_I_CACHE
+//     /* Enable I-Cache---------------------------------------------------------*/
+//     SCB_EnableICache();
+// #endif
 
-#ifdef BSP_SCB_ENABLE_D_CACHE
-    /* Enable D-Cache---------------------------------------------------------*/
-    SCB_EnableDCache();
-#endif
+// #ifdef BSP_SCB_ENABLE_D_CACHE
+//     /* Enable D-Cache---------------------------------------------------------*/
+//     SCB_EnableDCache();
+// #endif
 
     /* HAL_Init() function is called at the beginning of the program */
-    HAL_Init();
+    // HAL_Init();
 
-    /* System clock initialization */
-    SystemClock_Config();
+    // /* System clock initialization */
+    // SystemClock_Config();
 
 #if defined(RT_USING_HEAP)
     /* Heap initialization */
     rt_system_heap_init((void *)HEAP_BEGIN, (void *)HEAP_END);
 #endif
 
-#ifdef RT_USING_PIN
-    rt_hw_pin_init();
-#endif
+// #ifdef RT_USING_PIN
+//     rt_hw_pin_init();
+// #endif
 
-#ifdef RT_USING_SERIAL
-    rt_hw_usart_init();
-#endif
+// #ifdef RT_USING_SERIAL
+//     rt_hw_usart_init();
+// #endif
 
-#if defined(RT_USING_CONSOLE) && defined(RT_USING_DEVICE)
-    /* Set the shell console output device */
-    rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
-#endif
+// #if defined(RT_USING_CONSOLE) && defined(RT_USING_DEVICE)
+//     /* Set the shell console output device */
+//     rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
+// #endif
 
-#if defined(RT_USING_CONSOLE) && defined(RT_USING_NANO)
-    extern void rt_hw_console_init(void);
-    rt_hw_console_init();
-#endif
+// #if defined(RT_USING_CONSOLE) && defined(RT_USING_NANO)
+//     extern void rt_hw_console_init(void);
+//     rt_hw_console_init();
+// #endif
 
-#ifdef RT_USING_COMPONENTS_INIT
-    /* Board underlying hardware initialization */
-    rt_components_board_init();
-#endif
+// #ifdef RT_USING_COMPONENTS_INIT
+//     /* Board underlying hardware initialization */
+//     rt_components_board_init();
+// #endif
 }
