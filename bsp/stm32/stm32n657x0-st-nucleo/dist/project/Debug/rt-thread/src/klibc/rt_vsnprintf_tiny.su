@@ -1,0 +1,4 @@
+../rt-thread/src/klibc/rt_vsnprintf_tiny.c:27:15:divide	24	static
+../rt-thread/src/klibc/rt_vsnprintf_tiny.c:44:15:skip_atoi	24	static
+../rt-thread/src/klibc/rt_vsnprintf_tiny.c:61:14:print_number	80	static
+../rt-thread/src/klibc/rt_vsnprintf_tiny.c:298:5:rt_vsnprintf	80	static

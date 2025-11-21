@@ -1,0 +1,13 @@
+../rt-thread/src/klibc/kstring.c:39:7:rt_memset	48	static
+../rt-thread/src/klibc/kstring.c:124:7:rt_memcpy	48	static
+../rt-thread/src/klibc/kstring.c:214:7:rt_memmove	32	static
+../rt-thread/src/klibc/kstring.c:256:5:rt_memcmp	40	static
+../rt-thread/src/klibc/kstring.c:285:7:rt_strstr	24	static
+../rt-thread/src/klibc/kstring.c:329:5:rt_strcasecmp	24	static
+../rt-thread/src/klibc/kstring.c:361:7:rt_strncpy	32	static
+../rt-thread/src/klibc/kstring.c:402:7:rt_strcpy	24	static
+../rt-thread/src/klibc/kstring.c:438:5:rt_strncmp	32	static
+../rt-thread/src/klibc/kstring.c:474:5:rt_strcmp	16	static
+../rt-thread/src/klibc/kstring.c:500:8:rt_strlen	24	static
+../rt-thread/src/klibc/kstring.c:527:8:rt_strnlen	24	static
+../rt-thread/src/klibc/kstring.c:544:7:rt_strdup	24	static

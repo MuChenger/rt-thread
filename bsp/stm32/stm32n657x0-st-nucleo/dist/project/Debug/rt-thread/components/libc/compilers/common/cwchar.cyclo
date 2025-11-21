@@ -1,0 +1,3 @@
+../rt-thread/components/libc/compilers/common/cwchar.c:20:12:bisearch	6
+../rt-thread/components/libc/compilers/common/cwchar.c:50:5:wcwidth	24
+../rt-thread/components/libc/compilers/common/cwchar.c:124:5:wcswidth	4

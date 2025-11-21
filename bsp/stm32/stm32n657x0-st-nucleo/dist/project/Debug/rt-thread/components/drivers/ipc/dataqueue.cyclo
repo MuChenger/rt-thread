@@ -1,0 +1,8 @@
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:50:16:rt_list_init	1
+../rt-thread/components/drivers/ipc/dataqueue.c:43:1:rt_data_queue_init	4
+../rt-thread/components/drivers/ipc/dataqueue.c:92:10:rt_data_queue_push	17
+../rt-thread/components/drivers/ipc/dataqueue.c:210:10:rt_data_queue_pop	21
+../rt-thread/components/drivers/ipc/dataqueue.c:332:10:rt_data_queue_peek	4
+../rt-thread/components/drivers/ipc/dataqueue.c:365:6:rt_data_queue_reset	3
+../rt-thread/components/drivers/ipc/dataqueue.c:405:10:rt_data_queue_deinit	3
+../rt-thread/components/drivers/ipc/dataqueue.c:432:13:rt_data_queue_len	5

@@ -1,0 +1,8 @@
+../rt-thread/src/clock.c:51:6:rt_tick_sethook	1
+../rt-thread/src/clock.c:69:11:rt_tick_get	1
+../rt-thread/src/clock.c:83:11:rt_tick_get_delta	2
+../rt-thread/src/clock.c:97:6:rt_tick_set	1
+../rt-thread/src/clock.c:136:6:rt_tick_increase	3
+../rt-thread/src/clock.c:170:6:rt_tick_increase_tick	3
+../rt-thread/src/clock.c:214:11:rt_tick_from_millisecond	2
+../rt-thread/src/clock.c:246:19:rt_tick_get_millisecond	1

@@ -1,0 +1,9 @@
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:143:13:rt_hw_stack_init	40	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:208:6:rt_hw_exception_install	16	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:225:13:usage_fault_track	8	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:269:13:bus_fault_track	8	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:314:13:mem_manage_fault_track	8	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:354:13:hard_fault_track	8	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:396:6:rt_hw_hard_fault_exception	32	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:458:6:rt_hw_cpu_reset	4	static
+../rt-thread/libcpu/arm/cortex-m7/cpuport.c:517:5:__rt_ffs	16	static

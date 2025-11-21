@@ -1,0 +1,6 @@
+../rt-thread/components/libc/compilers/common/cstdlib.c:23:6:__rt_libc_exit	24	static
+D:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344\tools\bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include/stdlib.h:191:5:system	16	static
+../rt-thread/components/libc/compilers/common/cstdlib.c:75:7:ltoa	80	static
+../rt-thread/components/libc/compilers/common/cstdlib.c:134:7:itoa	24	static
+../rt-thread/components/libc/compilers/common/cstdlib.c:148:7:ultoa	80	static
+../rt-thread/components/libc/compilers/common/cstdlib.c:194:7:utoa	24	static

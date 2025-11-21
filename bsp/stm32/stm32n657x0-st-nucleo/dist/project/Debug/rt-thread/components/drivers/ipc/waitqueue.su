@@ -1,0 +1,13 @@
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:50:16:rt_list_init	16	static
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:76:16:rt_list_insert_before	16	static
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:89:16:rt_list_remove	16	static
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:101:15:rt_list_isempty	16	static
+../rt-thread/components/drivers/ipc/waitqueue.c:29:6:rt_wqueue_add	24	static
+../rt-thread/components/drivers/ipc/waitqueue.c:44:6:rt_wqueue_remove	24	static
+../rt-thread/components/drivers/ipc/waitqueue.c:65:5:__wqueue_default_wake	16	static
+../rt-thread/components/drivers/ipc/waitqueue.c:80:6:rt_wqueue_wakeup	40	static
+../rt-thread/components/drivers/ipc/waitqueue.c:136:6:rt_wqueue_wakeup_all	40	static
+../rt-thread/components/drivers/ipc/waitqueue.c:199:12:_rt_wqueue_wait	72	static
+../rt-thread/components/drivers/ipc/waitqueue.c:267:5:rt_wqueue_wait	24	static
+../rt-thread/components/drivers/ipc/waitqueue.c:272:5:rt_wqueue_wait_killable	24	static
+../rt-thread/components/drivers/ipc/waitqueue.c:277:5:rt_wqueue_wait_interruptible	24	static

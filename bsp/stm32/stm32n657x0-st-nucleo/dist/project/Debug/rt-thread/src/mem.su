@@ -1,0 +1,6 @@
+../rt-thread/src/mem.c:119:13:plug_holes	24	static
+../rt-thread/src/mem.c:170:11:rt_smem_init	48	static
+../rt-thread/src/mem.c:244:10:rt_smem_detach	16	static
+../rt-thread/src/mem.c:271:7:rt_smem_alloc	40	static
+../rt-thread/src/mem.c:403:7:rt_smem_realloc	56	static
+../rt-thread/src/mem.c:497:6:rt_smem_free	24	static

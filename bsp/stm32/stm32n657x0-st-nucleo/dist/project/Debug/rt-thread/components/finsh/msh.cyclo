@@ -1,0 +1,16 @@
+../rt-thread/components/finsh/msh.c:35:12:msh_help	2
+../rt-thread/components/finsh/msh.c:60:12:cmd_ps	1
+../rt-thread/components/finsh/msh.c:76:12:cmd_free	1
+../rt-thread/components/finsh/msh.c:152:12:msh_split	18
+../rt-thread/components/finsh/msh.c:231:23:msh_get_cmd	4
+../rt-thread/components/finsh/msh.c:324:12:_msh_exec_cmd	9
+../rt-thread/components/finsh/msh.c:541:5:msh_exec	9
+../rt-thread/components/finsh/msh.c:616:12:str_common	4
+../rt-thread/components/finsh/msh.c:776:6:msh_auto_complete	7
+../rt-thread/components/finsh/msh.c:854:23:msh_get_cmd_opt	5
+../rt-thread/components/finsh/msh.c:885:12:msh_get_argc	5
+../rt-thread/components/finsh/msh.c:903:13:msh_opt_complete	6
+../rt-thread/components/finsh/msh.c:940:13:msh_opt_help	2
+../rt-thread/components/finsh/msh.c:951:6:msh_opt_auto_complete	8
+../rt-thread/components/finsh/msh.c:985:5:msh_cmd_opt_id_get	5
+../rt-thread/components/finsh/msh.c:1002:6:msh_opt_list_dump	3

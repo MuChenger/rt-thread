@@ -1,0 +1,7 @@
+../rt-thread/src/cpu_up.c:30:6:rt_spin_lock_init	1
+../rt-thread/src/cpu_up.c:43:6:rt_spin_lock	1
+../rt-thread/src/cpu_up.c:56:6:rt_spin_unlock	1
+../rt-thread/src/cpu_up.c:73:11:rt_spin_lock_irqsave	1
+../rt-thread/src/cpu_up.c:92:6:rt_spin_unlock_irqrestore	1
+../rt-thread/src/cpu_up.c:105:16:rt_cpu_self	1
+../rt-thread/src/cpu_up.c:117:16:rt_cpu_index	2

@@ -1,0 +1,4 @@
+E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/board/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_bus.h:1407:22:LL_AHB4_GRP1_EnableClock	1
+../libraries/HAL_Drivers/nano/drv_gpio.c:18:6:rt_pin_mode	25
+../libraries/HAL_Drivers/nano/drv_gpio.c:108:6:rt_pin_write	3
+../libraries/HAL_Drivers/nano/drv_gpio.c:118:11:rt_pin_read	1

@@ -1,0 +1,24 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+
+src = Glob('STM32N6xx_HAL_Driver/Src/*.c')
+src += Glob('BSP/STM32N6xx_Nucleo/*.c')
+
+path = [cwd]
+path += [cwd + '/STM32N6xx_HAL_Driver/Inc']
+path += [cwd + '/STM32N6xx_HAL_Driver/Inc/Legacy']
+path += [cwd + '/STM32N6xx_HAL_Driver/Inc/Legacy']
+path += [cwd + '/CMSIS/Include']
+path += [cwd + '/CMSIS/Device/ST/STM32N6xx/Include']
+path += [cwd + '/BSP/STM32N6xx_Nucleo']
+
+group = DefineGroup('HAL', src, depend = [''], CPPPATH = path)
+
+list = os.listdir(cwd)
+for item in list:
+    if os.path.isfile(os.path.join(cwd, item, 'SConscript')):
+        group = group + SConscript(os.path.join(item, 'SConscript'))
+
+Return('group')

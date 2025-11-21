@@ -1,0 +1,10 @@
+../rt-thread/src/components.c:57:12:rti_start	4	static
+../rt-thread/src/components.c:63:12:rti_board_start	4	static
+../rt-thread/src/components.c:69:12:rti_board_end	4	static
+../rt-thread/src/components.c:75:12:rti_end	4	static
+../rt-thread/src/components.c:86:6:rt_components_board_init	16	static
+../rt-thread/src/components.c:110:6:rt_components_init	16	static
+../rt-thread/src/components.c:160:5:entry	8	static
+../rt-thread/src/components.c:181:13:main_thread_entry	16	static
+../rt-thread/src/components.c:209:6:rt_application_init	24	static
+../rt-thread/src/components.c:238:5:rtthread_startup	8	static

@@ -1,0 +1,2 @@
+../rt-thread/components/libc/compilers/common/cctype.c:15:5:isascii	3
+../rt-thread/components/libc/compilers/common/cctype.c:23:5:toascii	1

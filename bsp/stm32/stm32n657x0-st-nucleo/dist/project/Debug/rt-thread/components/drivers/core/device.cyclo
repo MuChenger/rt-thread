@@ -1,0 +1,13 @@
+../rt-thread/components/drivers/core/device.c:67:10:rt_device_register	3
+../rt-thread/components/drivers/core/device.c:102:10:rt_device_unregister	4
+../rt-thread/components/drivers/core/device.c:122:13:rt_device_find	1
+../rt-thread/components/drivers/core/device.c:138:13:rt_device_create	2
+../rt-thread/components/drivers/core/device.c:164:6:rt_device_destroy	4
+../rt-thread/components/drivers/core/device.c:186:10:rt_device_init	5
+../rt-thread/components/drivers/core/device.c:222:10:rt_device_open	14
+../rt-thread/components/drivers/core/device.c:292:10:rt_device_close	8
+../rt-thread/components/drivers/core/device.c:337:12:rt_device_read	5
+../rt-thread/components/drivers/core/device.c:380:12:rt_device_write	5
+../rt-thread/components/drivers/core/device.c:419:10:rt_device_control	4
+../rt-thread/components/drivers/core/device.c:445:10:rt_device_set_rx_indicate	3
+../rt-thread/components/drivers/core/device.c:469:10:rt_device_set_tx_complete	3

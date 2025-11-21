@@ -1,0 +1,13 @@
+../rt-thread/components/drivers/ipc/ringbuffer.c:18:36:rt_ringbuffer_status	3
+../rt-thread/components/drivers/ipc/ringbuffer.c:37:6:rt_ringbuffer_init	3
+../rt-thread/components/drivers/ipc/ringbuffer.c:63:11:rt_ringbuffer_put	5
+../rt-thread/components/drivers/ipc/ringbuffer.c:116:11:rt_ringbuffer_put_force	7
+../rt-thread/components/drivers/ipc/ringbuffer.c:177:11:rt_ringbuffer_get	5
+../rt-thread/components/drivers/ipc/ringbuffer.c:231:11:rt_ringbuffer_peek	4
+../rt-thread/components/drivers/ipc/ringbuffer.c:272:11:rt_ringbuffer_putchar	4
+../rt-thread/components/drivers/ipc/ringbuffer.c:305:11:rt_ringbuffer_putchar_force	5
+../rt-thread/components/drivers/ipc/ringbuffer.c:346:11:rt_ringbuffer_getchar	4
+../rt-thread/components/drivers/ipc/ringbuffer.c:378:11:rt_ringbuffer_data_len	4
+../rt-thread/components/drivers/ipc/ringbuffer.c:405:6:rt_ringbuffer_reset	2
+../rt-thread/components/drivers/ipc/ringbuffer.c:425:23:rt_ringbuffer_create	4
+../rt-thread/components/drivers/ipc/ringbuffer.c:457:6:rt_ringbuffer_destroy	2

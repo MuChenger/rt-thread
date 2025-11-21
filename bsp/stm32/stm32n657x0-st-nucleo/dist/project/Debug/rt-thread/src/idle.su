@@ -1,0 +1,5 @@
+../rt-thread/src/idle.c:59:10:rt_thread_idle_sethook	32	static
+../rt-thread/src/idle.c:95:10:rt_thread_idle_delhook	32	static
+../rt-thread/src/idle.c:120:13:idle_thread_entry	24	static
+../rt-thread/src/idle.c:165:6:rt_thread_idle_init	40	static
+../rt-thread/src/idle.c:208:13:rt_thread_idle_gethandler	16	static

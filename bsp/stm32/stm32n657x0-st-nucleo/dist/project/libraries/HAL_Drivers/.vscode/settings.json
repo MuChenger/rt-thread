@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.bin": "armabin",
+        ".jsonc": "json",
+        "drv_gpio.h": "c"
+    }
+}

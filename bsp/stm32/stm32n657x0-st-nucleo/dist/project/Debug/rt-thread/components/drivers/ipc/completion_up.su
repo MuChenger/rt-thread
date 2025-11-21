@@ -1,0 +1,4 @@
+../rt-thread/components/drivers/ipc/completion_up.c:40:6:rt_completion_init	16	static
+../rt-thread/components/drivers/ipc/completion_up.c:65:10:rt_completion_wait_flags	48	static
+../rt-thread/components/drivers/ipc/completion_up.c:168:10:rt_completion_wait_flags_noisr	24	static
+../rt-thread/components/drivers/ipc/completion_up.c:184:10:rt_completion_wakeup_by_errno	32	static
