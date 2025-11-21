@@ -1,0 +1,21 @@
+--cpu=Cortex-M55 --fpu=FPv5_D16
+"n6_fsbl\startup_stm32n657xx_fsbl.o"
+"n6_fsbl\main.o"
+"n6_fsbl\stm32n6xx_it.o"
+"n6_fsbl\stm32n6xx_hal_msp.o"
+"n6_fsbl\stm32n6xx_hal_cortex.o"
+"n6_fsbl\stm32n6xx_hal_pwr.o"
+"n6_fsbl\stm32n6xx_hal_pwr_ex.o"
+"n6_fsbl\stm32n6xx_hal_rcc.o"
+"n6_fsbl\stm32n6xx_hal_rcc_ex.o"
+"n6_fsbl\stm32n6xx_hal_gpio.o"
+"n6_fsbl\stm32n6xx_hal_dma.o"
+"n6_fsbl\stm32n6xx_hal_dma_ex.o"
+"n6_fsbl\stm32n6xx_hal.o"
+"n6_fsbl\stm32n6xx_hal_exti.o"
+"n6_fsbl\system_stm32n6xx_fsbl.o"
+--strict --scatter "stm32n657xx_axisram2_fsbl.sct"
+--import-cmse-lib-out="..\FSBL\N6_FSBL\N6_FSBL_CMSE_Lib.o"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "N6_FSBL.map" -o N6_FSBL\N6_FSBL.axf
