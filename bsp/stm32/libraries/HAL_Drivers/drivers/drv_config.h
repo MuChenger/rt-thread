@@ -138,6 +138,16 @@ extern "C" {
 #include "h7/pwm_config.h"
 #include "h7/usbd_config.h"
 
+#elif  defined(SOC_SERIES_STM32N6)
+#include "n6/dma_config.h"
+#include "n6/uart_config.h"
+#include "n6/spi_config.h"
+#include "n6/adc_config.h"
+#include "n6/dac_config.h"
+#include "n6/tim_config.h"
+#include "n6/pwm_config.h"
+#include "n6/usbd_config.h"
+
 #elif defined(SOC_SERIES_STM32U5)
 #include "u5/dma_config.h"
 #include "u5/uart_config.h"

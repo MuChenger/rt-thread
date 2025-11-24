@@ -348,7 +348,7 @@ static int stm32_putc(struct rt_serial_device *serial, char c)
 #if defined(SOC_SERIES_STM32L4) || defined(SOC_SERIES_STM32WL) || defined(SOC_SERIES_STM32F7) || defined(SOC_SERIES_STM32F0) \
     || defined(SOC_SERIES_STM32L0) || defined(SOC_SERIES_STM32G0) || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32L5) \
     || defined(SOC_SERIES_STM32G4) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32WB) || defined(SOC_SERIES_STM32F3)  \
-    || defined(SOC_SERIES_STM32U5) || defined(SOC_SERIES_STM32H5) || defined(SOC_SERIES_STM32H7RS)
+    || defined(SOC_SERIES_STM32U5) || defined(SOC_SERIES_STM32H5) || defined(SOC_SERIES_STM32H7RS) || defined(SOC_SERIES_STM32N6)
     uart->handle.Instance->TDR = c;
 #else
     uart->handle.Instance->DR = c;
@@ -370,7 +370,7 @@ static int stm32_getc(struct rt_serial_device *serial)
 #if defined(SOC_SERIES_STM32L4) || defined(SOC_SERIES_STM32WL) || defined(SOC_SERIES_STM32F7) || defined(SOC_SERIES_STM32F0) \
     || defined(SOC_SERIES_STM32L0) || defined(SOC_SERIES_STM32G0) || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32L5) \
     || defined(SOC_SERIES_STM32G4) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32WB)|| defined(SOC_SERIES_STM32F3) \
-    || defined(SOC_SERIES_STM32U5) || defined(SOC_SERIES_STM32H5) || defined(SOC_SERIES_STM32H7RS)
+    || defined(SOC_SERIES_STM32U5) || defined(SOC_SERIES_STM32H5) || defined(SOC_SERIES_STM32H7RS) || defined(SOC_SERIES_STM32N6)
         ch = uart->handle.Instance->RDR & uart->DR_mask;
 #else
         ch = uart->handle.Instance->DR & uart->DR_mask;
@@ -514,7 +514,7 @@ static void uart_isr(struct rt_serial_device *serial)
 #if !defined(SOC_SERIES_STM32L4) && !defined(SOC_SERIES_STM32WL) && !defined(SOC_SERIES_STM32F7) && !defined(SOC_SERIES_STM32F0) \
     && !defined(SOC_SERIES_STM32L0) && !defined(SOC_SERIES_STM32G0) && !defined(SOC_SERIES_STM32H7) \
     && !defined(SOC_SERIES_STM32G4) && !defined(SOC_SERIES_STM32MP1) && !defined(SOC_SERIES_STM32WB) \
-    && !defined(SOC_SERIES_STM32L5) && !defined(SOC_SERIES_STM32U5) && !defined(SOC_SERIES_STM32H5) && !defined(SOC_SERIES_STM32H7RS)
+    && !defined(SOC_SERIES_STM32L5) && !defined(SOC_SERIES_STM32U5) && !defined(SOC_SERIES_STM32H5) && !defined(SOC_SERIES_STM32H7RS) && !defined(SOC_SERIES_STM32N6)
 #ifdef SOC_SERIES_STM32F3
         if (__HAL_UART_GET_FLAG(&(uart->handle), UART_FLAG_LBDF) != RESET)
         {
@@ -1077,7 +1077,7 @@ static void stm32_dma_config(struct rt_serial_device *serial, rt_ubase_t flag)
         SET_BIT(RCC->AHBENR, dma_config->dma_rcc);
         tmpreg = READ_BIT(RCC->AHBENR, dma_config->dma_rcc);
 #elif defined(SOC_SERIES_STM32F2) || defined(SOC_SERIES_STM32F4) || defined(SOC_SERIES_STM32F7) || defined(SOC_SERIES_STM32L4) || defined(SOC_SERIES_STM32WL) \
-    || defined(SOC_SERIES_STM32G4)|| defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32WB)
+    || defined(SOC_SERIES_STM32G4)|| defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32WB) || defined(SOC_SERIES_STM32N6)
         /* enable DMA clock && Delay after an RCC peripheral clock enabling*/
         SET_BIT(RCC->AHB1ENR, dma_config->dma_rcc);
         tmpreg = READ_BIT(RCC->AHB1ENR, dma_config->dma_rcc);
@@ -1112,7 +1112,7 @@ static void stm32_dma_config(struct rt_serial_device *serial, rt_ubase_t flag)
     DMA_Handle->Instance                 = dma_config->Instance;
     DMA_Handle->Init.Channel             = dma_config->channel;
 #elif defined(SOC_SERIES_STM32L4) || defined(SOC_SERIES_STM32WL) || defined(SOC_SERIES_STM32G0) || defined(SOC_SERIES_STM32G4) || defined(SOC_SERIES_STM32WB)\
-    || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1)
+    || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32N6)
     DMA_Handle->Instance                 = dma_config->Instance;
     DMA_Handle->Init.Request             = dma_config->request;
 #endif
@@ -1133,7 +1133,7 @@ static void stm32_dma_config(struct rt_serial_device *serial, rt_ubase_t flag)
     }
 
     DMA_Handle->Init.Priority            = DMA_PRIORITY_MEDIUM;
-#if defined(SOC_SERIES_STM32F2) || defined(SOC_SERIES_STM32F4) || defined(SOC_SERIES_STM32F7) || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1)
+#if defined(SOC_SERIES_STM32F2) || defined(SOC_SERIES_STM32F4) || defined(SOC_SERIES_STM32F7) || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32N6)
     DMA_Handle->Init.FIFOMode            = DMA_FIFOMODE_DISABLE;
 #endif
     if (HAL_DMA_DeInit(DMA_Handle) != HAL_OK)
