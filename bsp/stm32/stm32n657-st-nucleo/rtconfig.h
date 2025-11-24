@@ -1,8 +1,8 @@
 #ifndef RT_CONFIG_H__
 #define RT_CONFIG_H__
 
-#define SOC_STM32H743ZI
-#define BOARD_STM32H743_NUCLEO
+#define SOC_STM32N657
+#define BOARD_STM32N657X0_NUCLEO
 
 /* RT-Thread Kernel */
 
@@ -100,7 +100,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
-#define RT_CONSOLE_DEVICE_NAME "uart3"
+#define RT_CONSOLE_DEVICE_NAME "uart1"
 #define RT_VER_NUM 0x50201
 #define RT_BACKTRACE_LEVEL_MAX_NR 32
 /* end of RT-Thread Kernel */
@@ -126,6 +126,10 @@
 
 #define RT_USING_DEVICE_IPC
 #define RT_UNAMED_PIPE_NUMBER 64
+#define RT_USING_SERIAL
+#define RT_USING_SERIAL_V1
+#define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_PIN
 /* end of Device Drivers */
 
 /* C/C++ and POSIX layer */
@@ -381,7 +385,7 @@
 /* end of Arduino libraries */
 /* end of RT-Thread online packages */
 #define SOC_FAMILY_STM32
-#define SOC_SERIES_STM32H7
+#define SOC_SERIES_STM32N6
 #define BOARD_SERIES_STM32_NUCLEO_144
 
 /* Hardware Drivers Config */
@@ -390,6 +394,10 @@
 
 /* On-chip Peripheral Drivers */
 
+#define BSP_USING_GPIO
+#define BSP_USING_UART
+#define BSP_STM32_UART_V1_TX_TIMEOUT 6000
+#define BSP_USING_UART1
 /* end of On-chip Peripheral Drivers */
 
 /* Board extended module Drivers */
