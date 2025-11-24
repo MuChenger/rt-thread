@@ -1,0 +1,23 @@
+--cpu=Cortex-M55 --fpu=FPv5_D16
+"cubemx_config_fsbl\startup_stm32n657xx_fsbl.o"
+"cubemx_config_fsbl\main.o"
+"cubemx_config_fsbl\stm32n6xx_it.o"
+"cubemx_config_fsbl\stm32n6xx_hal_msp.o"
+"cubemx_config_fsbl\system_stm32n6xx_fsbl.o"
+"cubemx_config_fsbl\stm32n6xx_hal_cortex.o"
+"cubemx_config_fsbl\stm32n6xx_hal_uart.o"
+"cubemx_config_fsbl\stm32n6xx_hal_uart_ex.o"
+"cubemx_config_fsbl\stm32n6xx_hal_dma.o"
+"cubemx_config_fsbl\stm32n6xx_hal_dma_ex.o"
+"cubemx_config_fsbl\stm32n6xx_hal_rcc.o"
+"cubemx_config_fsbl\stm32n6xx_hal_rcc_ex.o"
+"cubemx_config_fsbl\stm32n6xx_hal_gpio.o"
+"cubemx_config_fsbl\stm32n6xx_hal_pwr.o"
+"cubemx_config_fsbl\stm32n6xx_hal_pwr_ex.o"
+"cubemx_config_fsbl\stm32n6xx_hal.o"
+"cubemx_config_fsbl\stm32n6xx_hal_exti.o"
+--strict --scatter "stm32n657xx_axisram2_fsbl.sct"
+--import-cmse-lib-out="..\FSBL\CubeMX_Config_FSBL\CubeMX_Config_FSBL_CMSE_Lib.o"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "CubeMX_Config_FSBL.map" -o CubeMX_Config_FSBL\CubeMX_Config_FSBL.axf

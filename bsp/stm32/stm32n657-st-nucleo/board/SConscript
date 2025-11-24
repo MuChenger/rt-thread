@@ -5,14 +5,21 @@ cwd = GetCurrentDir()
 
 # add the general drivers.
 src = Glob('board.c')
-src += Glob('CubeMX_Config/Src/stm32h7xx_hal_msp.c')
+src += Glob('startup_stm32n657xx_fsbl.s')
+src += Glob('CubeMX_Config/FSBL/Src/stm32n6xx_hal_msp.c')
+src += Glob('CubeMX_Config/FSBL/Src/system_stm32n6xx_fsbl.c')  
+src += Glob('CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src/*.c')  
 
 path = [cwd]
-path += [cwd + '/CubeMX_Config/Inc']
+path += [cwd + '/CubeMX_Config/FSBL/Inc']
+path += [cwd + '/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Inc']
+path += [cwd + '/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Inc/Legacy']
+path += [cwd + '/CubeMX_Config/Drivers/CMSIS/Include']
+path += [cwd + '/CubeMX_Config/Drivers/CMSIS/Device/ST/STM32N6xx/Include']
 
-# STM32H743xx || STM32H750xx || STM32F753xx
+# STM32N657xx
 # You can select chips from the list above
-CPPDEFINES = ['STM32H743xx']
+CPPDEFINES = ['STM32N657xx']
 
 group = DefineGroup('Drivers', src, depend = [''], CPPPATH = path)
 list = os.listdir(cwd)

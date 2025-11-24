@@ -12,7 +12,7 @@
 #define __BOARD_H__
 
 #include <rtthread.h>
-#include <stm32h7xx.h>
+#include "stm32n6xx.h"
 #include "drv_common.h"
 #include "drv_gpio.h"
 
@@ -24,8 +24,8 @@ extern "C" {
 #define STM32_FLASH_SIZE             (2048 * 1024)
 #define STM32_FLASH_END_ADDRESS      ((uint32_t)(STM32_FLASH_START_ADRESS + STM32_FLASH_SIZE))
 
-#define STM32_SRAM_SIZE           (512)
-#define STM32_SRAM_END            (0x24000000 + STM32_SRAM_SIZE * 1024)
+#define STM32_SRAM_SIZE           (511)
+#define STM32_SRAM_END            (0x34180400 + STM32_SRAM_SIZE * 1024)
 
 #if defined(__ARMCC_VERSION)
 extern int Image$$RW_IRAM1$$ZI$$Limit;
@@ -34,8 +34,8 @@ extern int Image$$RW_IRAM1$$ZI$$Limit;
 #pragma section="CSTACK"
 #define HEAP_BEGIN      (__segment_end("CSTACK"))
 #else
-extern int __bss_end;
-#define HEAP_BEGIN      (&__bss_end)
+extern int _ebss;
+#define HEAP_BEGIN      (&_ebss)
 #endif
 
 #define HEAP_END        STM32_SRAM_END

@@ -3,7 +3,7 @@ import os
 # toolchains options
 ARCH='arm'
 CPU='cortex-m7'
-CROSS_TOOL='gcc'
+CROSS_TOOL='keil'
 
 # bsp lib config
 BSP_LIBRARY_TYPE = None
@@ -43,21 +43,17 @@ if PLATFORM == 'gcc':
     OBJDUMP = PREFIX + 'objdump'
     OBJCPY = PREFIX + 'objcopy'
 
-    DEVICE = ' -mcpu=cortex-m55 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb '
-    CFLAGS = DEVICE + ' -Dgcc' + ' -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx ' 
-    CFLAGS += ' -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -mcmse -MMD -MP '
-    
-    AFLAGS = + DEVICE + '-g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -Wa,-mimplicit-it=thumb '
-    
-    LFLAGS = DEVICE + ' -Wl,--gc-sections,-Map=rtthread.map,-cref,-u,Reset_Handler -T board/N6/FSBL/STM32N657X0HXQ_AXISRAM2_fsbl.ld'
-    LFLAGS += '-Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o -Wl,--start-group -lc -lm -Wl,--end-group'
+    DEVICE = ' -mcpu=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections'
+    CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  '
+    AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp -Wa,-mimplicit-it=thumb -DDEBUG '
+    LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/CubeMX_Config/FSBL/STM32N657X0HXQ_AXISRAM2_fsbl.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
 
     CPATH = ''
     LPATH = ''
 
     if BUILD == 'debug':
-        CFLAGS += ' -O0 -gdwarf-2 -g'
-        AFLAGS += ' -gdwarf-2'
+        CFLAGS += ' -Os -g3'
+        AFLAGS += ' -g3 '
     else:
         CFLAGS += ' -O2'
 
@@ -65,7 +61,7 @@ if PLATFORM == 'gcc':
     CFLAGS += ' -std=gnu11'
 
     POST_ACTION = OBJCPY + ' -O binary $TARGET rtthread.bin\n' + SIZE + ' $TARGET \n'
-
+# GCC
 elif PLATFORM == 'armcc':
     # toolchains
     CC = 'armcc'
@@ -75,10 +71,10 @@ elif PLATFORM == 'armcc':
     LINK = 'armlink'
     TARGET_EXT = 'axf'
 
-    DEVICE = ' --cpu Cortex-M7.fp.sp'
+    DEVICE = ' --cpu Cortex-M55.fp.sp'
     CFLAGS = '-c ' + DEVICE + ' --apcs=interwork --c99'
     AFLAGS = DEVICE + ' --apcs=interwork '
-    LFLAGS = DEVICE + ' --scatter "board\linker_scripts\link.sct" --info sizes --info totals --info unused --info veneers --list rtthread.map --strict'
+    LFLAGS = DEVICE + ' --scatter "board/CubeMX_Config/FSBL/stm32n657xx_axisram2_fsbl.sct" --info sizes --info totals --info unused --info veneers --list rtthread.map --strict'
     CFLAGS += ' -I' + EXEC_PATH + '/ARM/ARMCC/include'
     LFLAGS += ' --libpath=' + EXEC_PATH + '/ARM/ARMCC/lib'
 
@@ -107,7 +103,7 @@ elif PLATFORM == 'armclang':
     LINK = 'armlink'
     TARGET_EXT = 'axf'
 
-    DEVICE = ' --cpu Cortex-M7.fp.sp '
+    DEVICE = ' --cpu Cortex-M55.fp.sp '
     CFLAGS = ' --target=arm-arm-none-eabi -mcpu=cortex-M7 '
     CFLAGS += ' -mcpu=cortex-M7 -mfpu=fpv4-sp-d16 '
     CFLAGS += ' -mfloat-abi=hard -c -fno-rtti -funsigned-char -fshort-enums -fshort-wchar '
@@ -115,7 +111,7 @@ elif PLATFORM == 'armclang':
     AFLAGS = DEVICE + ' --apcs=interwork '
     LFLAGS = DEVICE + ' --info sizes --info totals --info unused --info veneers '
     LFLAGS += ' --list rt-thread.map '
-    LFLAGS += r' --strict --scatter "board\linker_scripts\link.sct" '
+    LFLAGS += r' --strict --scatter "board/CubeMX_Config/FSBL/stm32n657xx_axisram2_fsbl.sct" '
     CFLAGS += ' -I' + EXEC_PATH + '/ARM/ARMCLANG/include'
     LFLAGS += ' --libpath=' + EXEC_PATH + '/ARM/ARMCLANG/lib'
 
