@@ -156,7 +156,7 @@ void finsh_set_prompt_mode(rt_uint32_t prompt_mode)
 
 int finsh_getchar(void)
 {
-#ifndef RT_USING_DEVICE
+#ifdef RT_USING_DEVICE
     char ch = 0;
 #ifdef RT_USING_POSIX_STDIO
     if(read(rt_posix_stdio_get_console(), &ch, 1) > 0)

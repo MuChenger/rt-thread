@@ -1,8 +1,0 @@
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:50:16:rt_list_init	16	static
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtthread.h:478:23:rt_mutex_get_owner	16	static
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/components/drivers/include/ipc/waitqueue.h:37:16:rt_wqueue_init	16	static
-../rt-thread/components/drivers/ipc/condvar.c:25:6:rt_condvar_init	16	static
-../rt-thread/components/drivers/ipc/condvar.c:37:12:_waitq_inqueue	40	static
-../rt-thread/components/drivers/ipc/condvar.c:73:5:rt_condvar_timedwait	72	static
-../rt-thread/components/drivers/ipc/condvar.c:151:5:rt_condvar_signal	24	static
-../rt-thread/components/drivers/ipc/condvar.c:163:5:rt_condvar_broadcast	24	static

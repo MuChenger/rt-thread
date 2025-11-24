@@ -12,7 +12,7 @@
 #define __SDIO_CONFIG_H__
 
 #include <rtthread.h>
-#include "stm32h7xx_hal.h"
+// #include "stm32h7xx_hal.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -22,6 +22,7 @@
 "./board/CubeMX_Config/FSBL/Core/Src/sysmem.o"
 "./board/CubeMX_Config/FSBL/Core/Src/system_stm32n6xx_fsbl.o"
 "./board/CubeMX_Config/FSBL/Core/Startup/startup_stm32n657x0hxq_fsbl.o"
+"./board/CubeMX_Config/FSBL/Core/Startup/startup_stm32n657xx_fsbl.o"
 "./board/board.o"
 "./libraries/HAL_Drivers/drv_common.o"
 "./rt-thread/components/drivers/core/device.o"

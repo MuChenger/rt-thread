@@ -1,3 +1,0 @@
-../rt-thread/src/klibc/rt_vsscanf.c:48:29:__sccl	32	static
-../rt-thread/src/klibc/rt_vsscanf.c:102:12:scanf_parse	144	static
-../rt-thread/src/klibc/rt_vsscanf.c:687:5:rt_vsscanf	48	static

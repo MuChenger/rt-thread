@@ -14,24 +14,6 @@ template_fsbl/drv_common.o: libraries\HAL_Drivers\drv_common.c \
   board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include\stm32n657xx.h \
   board\CubeMX_Config\Drivers\CMSIS\Include\core_cm55.h \
   board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include\system_stm32n6xx.h \
-  libraries\HAL_Drivers\drivers\drv_gpio.h \
-  rt-thread\components\drivers\include\rtdevice.h \
-  rt-thread\components\drivers\include\drivers\core\driver.h \
-  rt-thread\components\drivers\include\drivers\core\bus.h \
-  rt-thread\components\drivers\include\drivers\classes\block.h \
-  rt-thread\components\drivers\include\drivers\classes\char.h \
-  rt-thread\components\drivers\include\drivers\classes\graphic.h \
-  rt-thread\components\drivers\include\drivers\classes\mtd.h \
-  rt-thread\components\drivers\include\drivers\classes\net.h \
-  rt-thread\components\drivers\include\ipc\ringbuffer.h \
-  rt-thread\components\drivers\include\ipc\completion.h \
-  rt-thread\components\drivers\include\ipc\dataqueue.h \
-  rt-thread\components\drivers\include\ipc\workqueue.h \
-  rt-thread\components\drivers\include\ipc\condvar.h \
-  rt-thread\components\drivers\include\ipc\waitqueue.h \
-  rt-thread\components\drivers\include\ipc\pipe.h \
-  rt-thread\components\drivers\include\ipc\poll.h \
-  rt-thread\components\drivers\include\ipc\ringblk_buf.h \
   board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal.h \
   board\CubeMX_Config\FSBL\Core\Inc\stm32n6xx_hal_conf.h \
   board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_rcc.h \
@@ -51,4 +33,25 @@ template_fsbl/drv_common.o: libraries\HAL_Drivers\drv_common.c \
   board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_pwr_ex.h \
   board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart.h \
   board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart_ex.h \
-  rt-thread\include\rtdbg.h
+  rt-thread\components\drivers\include\rtdevice.h \
+  rt-thread\components\drivers\include\drivers\core\driver.h \
+  rt-thread\components\drivers\include\drivers\core\bus.h \
+  rt-thread\components\drivers\include\drivers\classes\block.h \
+  rt-thread\components\drivers\include\drivers\classes\char.h \
+  rt-thread\components\drivers\include\drivers\classes\graphic.h \
+  rt-thread\components\drivers\include\drivers\classes\mtd.h \
+  rt-thread\components\drivers\include\drivers\classes\net.h \
+  rt-thread\components\drivers\include\ipc\ringbuffer.h \
+  rt-thread\components\drivers\include\ipc\completion.h \
+  rt-thread\components\drivers\include\ipc\dataqueue.h \
+  rt-thread\components\drivers\include\ipc\workqueue.h \
+  rt-thread\components\drivers\include\ipc\condvar.h \
+  rt-thread\components\drivers\include\ipc\waitqueue.h \
+  rt-thread\components\drivers\include\ipc\pipe.h \
+  rt-thread\components\drivers\include\ipc\poll.h \
+  rt-thread\components\drivers\include\ipc\ringblk_buf.h \
+  rt-thread\components\drivers\include\drivers\dev_serial.h \
+  rt-thread\components\drivers\include\drivers\dev_pin.h \
+  libraries\HAL_Drivers\drivers\drv_gpio.h \
+  libraries\HAL_Drivers\drivers\drv_usart.h \
+  libraries\HAL_Drivers\drivers\drv_dma.h rt-thread\include\rtdbg.h

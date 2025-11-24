@@ -104,7 +104,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
-#define RT_CONSOLE_DEVICE_NAME "uart3"
+#define RT_CONSOLE_DEVICE_NAME "uart1"
 #define RT_VER_NUM 0x50201
 #define RT_BACKTRACE_LEVEL_MAX_NR 32
 /* end of RT-Thread Kernel */
@@ -144,6 +144,10 @@
 
 #define RT_USING_DEVICE_IPC
 #define RT_UNAMED_PIPE_NUMBER 64
+#define RT_USING_SERIAL
+#define RT_USING_SERIAL_V1
+#define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_PIN
 /* end of Device Drivers */
 
 /* C/C++ and POSIX layer */
@@ -404,6 +408,10 @@
 
 /* On-chip Peripheral Drivers */
 
+#define BSP_USING_GPIO
+#define BSP_USING_UART
+#define BSP_STM32_UART_V1_TX_TIMEOUT 6000
+#define BSP_USING_UART1
 /* end of On-chip Peripheral Drivers */
 
 /* Board extended module Drivers */

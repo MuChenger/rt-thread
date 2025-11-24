@@ -1,4 +1,0 @@
-../rt-thread/src/klibc/kstdio.c:28:5:rt_snprintf	24	static
-../rt-thread/src/klibc/kstdio.c:52:5:rt_vsprintf	24	static
-../rt-thread/src/klibc/kstdio.c:67:5:rt_sprintf	28	static
-../rt-thread/src/klibc/kstdio.c:105:5:rt_sscanf	28	static

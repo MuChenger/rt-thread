@@ -1,4 +1,0 @@
-../rt-thread/components/drivers/ipc/completion_comm.c:19:6:rt_completion_done	1
-../rt-thread/components/drivers/ipc/completion_comm.c:33:10:rt_completion_wakeup	1
-../rt-thread/components/drivers/ipc/completion_comm.c:54:10:rt_completion_wait_noisr	1
-../rt-thread/components/drivers/ipc/completion_comm.c:76:10:rt_completion_wait	1

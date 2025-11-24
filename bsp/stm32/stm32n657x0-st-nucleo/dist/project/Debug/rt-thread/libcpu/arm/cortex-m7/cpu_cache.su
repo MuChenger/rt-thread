@@ -1,8 +1,0 @@
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:22:6:rt_hw_cpu_icache_enable	4	static,ignoring_inline_asm
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:27:6:rt_hw_cpu_icache_disable	4	static,ignoring_inline_asm
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:32:11:rt_hw_cpu_icache_status	4	static
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:37:6:rt_hw_cpu_icache_ops	40	static,ignoring_inline_asm
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:56:6:rt_hw_cpu_dcache_enable	24	static,ignoring_inline_asm
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:61:6:rt_hw_cpu_dcache_disable	48	static,ignoring_inline_asm
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:66:11:rt_hw_cpu_dcache_status	4	static
-../rt-thread/libcpu/arm/cortex-m7/cpu_cache.c:71:6:rt_hw_cpu_dcache_ops	88	static,ignoring_inline_asm

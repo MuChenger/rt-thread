@@ -329,7 +329,7 @@
             <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
-            <v6Lang>6</v6Lang>
+            <v6Lang>4</v6Lang>
             <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>__CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, RT_USING_LIBC, __STDC_LIMIT_MACROS</Define>
+              <Define>__CLK_TCK=RT_TICK_PER_SECOND, RT_USING_LIBC, __RTTHREAD__, __STDC_LIMIT_MACROS, RT_USING_ARMLIBC, STM32H743xx,USE_HAL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>rt-thread\components\drivers\phy;rt-thread\components\libc\compilers\common\extension;rt-thread\components\libc\posix\ipc;rt-thread\components\libc\posix\io\epoll;rt-thread\components\libc\posix\io\eventfd;libraries\HAL_Drivers\drivers\config;rt-thread\components\drivers\include;rt-thread\components\drivers\include;rt-thread\components\libc\compilers\common\include;board\CubeMX_Config\Drivers\BSP\STM32N6xx_Nucleo;rt-thread\components\drivers\include;rt-thread\components\libc\posix\io\poll;board\CubeMX_Config\FSBL\Core\Inc;board\CubeMX_Config\Drivers;.;rt-thread\components\libc\compilers\common\extension\fcntl\octal;board\CubeMX_Config\Inc;rt-thread\components\net\utest;rt-thread\include;rt-thread\components\finsh;board\CubeMX_Config\Drivers\CMSIS\Include;rt-thread\libcpu\arm\common;applications;libraries\HAL_Drivers;libraries\HAL_Drivers\drivers;rt-thread\components\drivers\smp_call;rt-thread\libcpu\arm\cortex-m7;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;board;.\board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;.\board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;.\board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include</IncludePath>
+              <IncludePath>rt-thread\components\libc\posix\io\eventfd;rt-thread\libcpu\arm\common;rt-thread\components\finsh;rt-thread\components\drivers\include;rt-thread\components\drivers\smp_call;rt-thread\components\libc\compilers\common\include;board;board\CubeMX_Config\Drivers;rt-thread\components\drivers\include;rt-thread\components\libc\posix\ipc;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;rt-thread\include;libraries\HAL_Drivers;rt-thread\components\net\utest;libraries\HAL_Drivers\drivers;rt-thread\components\libc\compilers\common\extension;board\CubeMX_Config\Inc;board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include;rt-thread\components\libc\posix\io\poll;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;rt-thread\components\drivers\include;rt-thread\components\libc\compilers\common\extension\fcntl\octal;rt-thread\libcpu\arm\cortex-m7;rt-thread\components\drivers\phy;.;board\CubeMX_Config\FSBL\Core\Inc;board\CubeMX_Config\Drivers\BSP\STM32N6xx_Nucleo;rt-thread\components\libc\posix\io\epoll;libraries\HAL_Drivers\drivers\config;applications;board\CubeMX_Config\Drivers\CMSIS\Include;rt-thread\components\drivers\include;rt-thread\components\drivers\include;..\project;.\board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;.\board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -989,6 +989,118 @@
                 </FileArmAds>
               </FileOption>
             </File>
+            <File>
+              <FileName>dev_pin.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\pin\dev_pin.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>0</PublicsOnly>
+                  <StopOnExitCode>3</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls> </MiscControls>
+                      <Define>__RT_IPC_SOURCE__</Define>
+                      <Undefine> </Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>dev_serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\drivers\serial\dev_serial.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>0</PublicsOnly>
+                  <StopOnExitCode>3</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls> </MiscControls>
+                      <Define>__RT_IPC_SOURCE__</Define>
+                      <Undefine> </Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -998,6 +1110,16 @@
               <FileName>board.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\HAL_Drivers\drivers\drv_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>drv_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>libraries\HAL_Drivers\drivers\drv_usart.c</FilePath>
             </File>
             <File>
               <FileName>drv_common.c</FileName>
@@ -1010,24 +1132,24 @@
           <GroupName>Finsh</GroupName>
           <Files>
             <File>
-              <FileName>shell.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>rt-thread\components\finsh\shell.c</FilePath>
-            </File>
-            <File>
               <FileName>cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\finsh\cmd.c</FilePath>
             </File>
             <File>
-              <FileName>msh.c</FileName>
+              <FileName>shell.c</FileName>
               <FileType>1</FileType>
-              <FilePath>rt-thread\components\finsh\msh.c</FilePath>
+              <FilePath>rt-thread\components\finsh\shell.c</FilePath>
             </File>
             <File>
               <FileName>msh_parse.c</FileName>
               <FileType>1</FileType>
               <FilePath>rt-thread\components\finsh\msh_parse.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>rt-thread\components\finsh\msh.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1035,14 +1157,9 @@
           <GroupName>FSBL</GroupName>
           <Files>
             <File>
-              <FileName>Src_main.c</FileName>
+              <FileName>sysmem.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\FSBL\Core\Src\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32n6xx_hal_msp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\FSBL\Core\Src\stm32n6xx_hal_msp.c</FilePath>
+              <FilePath>board\CubeMX_Config\FSBL\Core\Src\sysmem.c</FilePath>
             </File>
             <File>
               <FileName>stm32n6xx_it.c</FileName>
@@ -1050,19 +1167,24 @@
               <FilePath>board\CubeMX_Config\FSBL\Core\Src\stm32n6xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>system_stm32n6xx_fsbl.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\FSBL\Core\Src\system_stm32n6xx_fsbl.c</FilePath>
-            </File>
-            <File>
               <FileName>syscalls.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\FSBL\Core\Src\syscalls.c</FilePath>
             </File>
             <File>
-              <FileName>sysmem.c</FileName>
+              <FileName>Src_main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\FSBL\Core\Src\sysmem.c</FilePath>
+              <FilePath>board\CubeMX_Config\FSBL\Core\Src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32n6xx_fsbl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\FSBL\Core\Src\system_stm32n6xx_fsbl.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32n6xx_hal_msp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\FSBL\Core\Src\stm32n6xx_hal_msp.c</FilePath>
             </File>
             <File>
               <FileName>startup_stm32n657xx_fsbl.c</FileName>
@@ -1075,24 +1197,14 @@
           <GroupName>HAL</GroupName>
           <Files>
             <File>
-              <FileName>stm32n6xx_hal_pwr_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32n6xx_hal_icache.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_icache.c</FilePath>
             </File>
             <File>
-              <FileName>stm32n6xx_hal_pwr.c</FileName>
+              <FileName>stm32n6xx_hal_uart_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32n6xx_hal_cortex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c</FilePath>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32n6xx_hal_usart.c</FileName>
@@ -1100,9 +1212,9 @@
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_usart.c</FilePath>
             </File>
             <File>
-              <FileName>stm32n6xx_hal_dma_ex.c</FileName>
+              <FileName>stm32n6xx_hal_usart_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c</FilePath>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_usart_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32n6xx_hal_rcc_ex.c</FileName>
@@ -1110,19 +1222,34 @@
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
+              <FileName>stm32n6xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32n6xx_hal_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32n6xx_hal.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32n6xx_hal_usart_ex.c</FileName>
+              <FileName>stm32n6xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_usart_ex.c</FilePath>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32n6xx_hal_rcc.c</FileName>
+              <FileName>stm32n6xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c</FilePath>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32n6xx_hal_dma_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c</FilePath>
             </File>
             <File>
               <FileName>stm32n6xx_hal_gpio.c</FileName>
@@ -1135,16 +1262,6 @@
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32n6xx_hal_uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32n6xx_hal_uart_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32n6xx_nucleo.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\Drivers\BSP\STM32N6xx_Nucleo\stm32n6xx_nucleo.c</FilePath>
@@ -1153,6 +1270,11 @@
               <FileName>stm32n6xx_hal_exti.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32n6xx_hal_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c</FilePath>
             </File>
           </Files>
         </Group>

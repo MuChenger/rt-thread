@@ -4,6 +4,9 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
+ELF_SRCS += \
+../rt-thread.elf 
+
 O_SRCS += \
 ../secure_nsclib.o 
 

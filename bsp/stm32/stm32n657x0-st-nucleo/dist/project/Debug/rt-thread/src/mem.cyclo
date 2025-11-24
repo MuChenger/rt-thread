@@ -1,6 +1,0 @@
-../rt-thread/src/mem.c:119:13:plug_holes	10
-../rt-thread/src/mem.c:170:11:rt_smem_init	3
-../rt-thread/src/mem.c:244:10:rt_smem_detach	4
-../rt-thread/src/mem.c:271:7:rt_smem_alloc	22
-../rt-thread/src/mem.c:403:7:rt_smem_realloc	15
-../rt-thread/src/mem.c:497:6:rt_smem_free	11

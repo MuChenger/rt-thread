@@ -23,12 +23,31 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Template_FSBL \
 applications \
 board/CubeMX_Config/Drivers/BSP/STM32N6xx_Nucleo \
 board/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src \
 board/CubeMX_Config/FSBL/Core/Src \
 board/CubeMX_Config/FSBL/Core/Startup \
 board \
+build/applications \
+build/board/CubeMX_Config/Drivers/BSP/STM32N6xx_Nucleo \
+build/board/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src \
+build/board/CubeMX_Config/FSBL/Core/Src \
+build/board/CubeMX_Config/FSBL/Core/Startup \
+build/board \
+build/kernel/components/drivers/core \
+build/kernel/components/drivers/ipc \
+build/kernel/components/drivers/pin \
+build/kernel/components/drivers/serial \
+build/kernel/components/finsh \
+build/kernel/components/libc/compilers/common \
+build/kernel/components/libc/compilers/newlib \
+build/kernel/libcpu/arm/common \
+build/kernel/libcpu/arm/cortex-m7 \
+build/kernel/src \
+build/kernel/src/klibc \
+build/libraries/HAL_Drivers \
 libraries/HAL_Drivers \
 rt-thread/components/drivers/core \
 rt-thread/components/drivers/ipc \

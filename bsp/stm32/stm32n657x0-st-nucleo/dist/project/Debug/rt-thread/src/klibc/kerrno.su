@@ -1,4 +1,0 @@
-../rt-thread/src/klibc/kerrno.c:68:13:rt_strerror	24	static
-../rt-thread/src/klibc/kerrno.c:90:10:rt_get_errno	16	static
-../rt-thread/src/klibc/kerrno.c:115:6:rt_set_errno	24	static
-../rt-thread/src/klibc/kerrno.c:144:6:_rt_errno	16	static

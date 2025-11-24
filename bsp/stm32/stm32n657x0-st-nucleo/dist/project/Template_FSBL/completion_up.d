@@ -27,4 +27,6 @@ template_fsbl/completion_up.o: \
   rt-thread\components\drivers\include\ipc\waitqueue.h \
   rt-thread\components\drivers\include\ipc\pipe.h \
   rt-thread\components\drivers\include\ipc\poll.h \
-  rt-thread\components\drivers\include\ipc\ringblk_buf.h
+  rt-thread\components\drivers\include\ipc\ringblk_buf.h \
+  rt-thread\components\drivers\include\drivers\dev_serial.h \
+  rt-thread\components\drivers\include\drivers\dev_pin.h

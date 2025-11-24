@@ -13,6 +13,25 @@ template_fsbl/cpu_cache.o: rt-thread\libcpu\arm\cortex-m7\cpu_cache.c \
   board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include\stm32n657xx.h \
   board\CubeMX_Config\Drivers\CMSIS\Include\core_cm55.h \
   board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include\system_stm32n6xx.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal.h \
+  board\CubeMX_Config\FSBL\Core\Inc\stm32n6xx_hal_conf.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_rcc.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_def.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_ll_bus.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_ll_rcc.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_rcc_ex.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_gpio.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_gpio_ex.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_dma.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_dma_ex.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_cortex.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_exti.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_icache.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_pwr.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_pwr_ex.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart.h \
+  board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart_ex.h \
   libraries\HAL_Drivers\drv_common.h \
   rt-thread\components\drivers\include\rtdevice.h \
   rt-thread\components\drivers\include\drivers\core\driver.h \
@@ -31,4 +50,5 @@ template_fsbl/cpu_cache.o: rt-thread\libcpu\arm\cortex-m7\cpu_cache.c \
   rt-thread\components\drivers\include\ipc\pipe.h \
   rt-thread\components\drivers\include\ipc\poll.h \
   rt-thread\components\drivers\include\ipc\ringblk_buf.h \
-  libraries\HAL_Drivers\drivers\drv_gpio.h
+  rt-thread\components\drivers\include\drivers\dev_serial.h \
+  rt-thread\components\drivers\include\drivers\dev_pin.h

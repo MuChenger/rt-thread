@@ -1,7 +1,0 @@
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:61:16:rt_list_insert_after	1
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:89:16:rt_list_remove	1
-E:/rt-thread/bsp/stm32/stm32n657x0-st-nucleo/dist/project/rt-thread/include/rtservice.h:101:15:rt_list_isempty	1
-../rt-thread/src/defunct.c:33:6:rt_thread_defunct_enqueue	1
-../rt-thread/src/defunct.c:47:13:rt_thread_defunct_dequeue	2
-../rt-thread/src/defunct.c:67:6:rt_defunct_execute	5
-../rt-thread/src/defunct.c:157:6:rt_thread_defunct_init	1

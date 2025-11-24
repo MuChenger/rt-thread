@@ -1,7 +1,0 @@
-../rt-thread/src/cpu_up.c:30:6:rt_spin_lock_init	16	static
-../rt-thread/src/cpu_up.c:43:6:rt_spin_lock	16	static
-../rt-thread/src/cpu_up.c:56:6:rt_spin_unlock	24	static
-../rt-thread/src/cpu_up.c:73:11:rt_spin_lock_irqsave	24	static
-../rt-thread/src/cpu_up.c:92:6:rt_spin_unlock_irqrestore	24	static
-../rt-thread/src/cpu_up.c:105:16:rt_cpu_self	4	static
-../rt-thread/src/cpu_up.c:117:16:rt_cpu_index	16	static

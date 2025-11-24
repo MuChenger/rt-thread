@@ -1,6 +1,0 @@
-../rt-thread/src/irq.c:41:6:rt_interrupt_enter_sethook	1
-../rt-thread/src/irq.c:55:6:rt_interrupt_leave_sethook	1
-../rt-thread/src/irq.c:100:14:rt_interrupt_enter	2
-../rt-thread/src/irq.c:117:14:rt_interrupt_leave	2
-../rt-thread/src/irq.c:136:20:rt_interrupt_get_nest	1
-../rt-thread/src/irq.c:151:19:rt_hw_interrupt_is_disabled	1

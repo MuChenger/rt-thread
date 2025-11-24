@@ -19,12 +19,31 @@ RM := rm -rf
 -include rt-thread/components/drivers/ipc/subdir.mk
 -include rt-thread/components/drivers/core/subdir.mk
 -include libraries/HAL_Drivers/subdir.mk
+-include build/libraries/HAL_Drivers/subdir.mk
+-include build/kernel/src/klibc/subdir.mk
+-include build/kernel/src/subdir.mk
+-include build/kernel/libcpu/arm/cortex-m7/subdir.mk
+-include build/kernel/libcpu/arm/common/subdir.mk
+-include build/kernel/components/libc/compilers/newlib/subdir.mk
+-include build/kernel/components/libc/compilers/common/subdir.mk
+-include build/kernel/components/finsh/subdir.mk
+-include build/kernel/components/drivers/serial/subdir.mk
+-include build/kernel/components/drivers/pin/subdir.mk
+-include build/kernel/components/drivers/ipc/subdir.mk
+-include build/kernel/components/drivers/core/subdir.mk
+-include build/board/CubeMX_Config/FSBL/Core/Startup/subdir.mk
+-include build/board/CubeMX_Config/FSBL/Core/Src/subdir.mk
+-include build/board/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src/subdir.mk
+-include build/board/CubeMX_Config/Drivers/BSP/STM32N6xx_Nucleo/subdir.mk
+-include build/board/subdir.mk
+-include build/applications/subdir.mk
 -include board/CubeMX_Config/FSBL/Core/Startup/subdir.mk
 -include board/CubeMX_Config/FSBL/Core/Src/subdir.mk
 -include board/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src/subdir.mk
 -include board/CubeMX_Config/Drivers/BSP/STM32N6xx_Nucleo/subdir.mk
 -include board/subdir.mk
 -include applications/subdir.mk
+-include Template_FSBL/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -61,7 +80,7 @@ MAP_FILES += \
 project.map \
 
 SIZE_OUTPUT += \
-default.size.stdout \
+rt-thread.size.stdout \
 
 OBJDUMP_LIST += \
 project.list \
@@ -82,7 +101,7 @@ project.elf project.map: $(OBJS) $(USER_OBJS) E:\rt-thread\bsp\stm32\stm32n657x0
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+rt-thread.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
@@ -99,7 +118,7 @@ project.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout project.bin project.elf project.list project.map
+	-$(RM) project.bin project.elf project.list project.map rt-thread.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

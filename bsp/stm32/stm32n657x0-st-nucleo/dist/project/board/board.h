@@ -14,7 +14,6 @@
 #include <rtthread.h>
 #include "stm32n6xx.h"
 #include "drv_common.h"
-#include "drv_gpio.h"
 
 #ifdef __cplusplus
 extern "C" {

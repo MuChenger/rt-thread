@@ -1,3 +1,0 @@
-../rt-thread/components/finsh/msh_parse.c:23:11:msh_isint	7
-../rt-thread/components/finsh/msh_parse.c:50:11:msh_ishex	8
-../rt-thread/components/finsh/msh_parse.c:84:5:msh_strtohex	4
