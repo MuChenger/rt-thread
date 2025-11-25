@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.bin": "armabin",
-        ".jsonc": "json",
-        "stm32n6xx.h": "c",
-        "stm32n6xx_hal.h": "c",
-        "stm32n6xx_hal_conf.h": "c"
-    }
-}

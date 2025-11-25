@@ -1,3 +1,0 @@
-../libraries/HAL_Drivers/nano/drv_console.c:17:6:rt_hw_console_init	10
-../libraries/HAL_Drivers/nano/drv_console.c:83:6:rt_hw_console_output	3
-../libraries/HAL_Drivers/nano/drv_console.c:101:6:rt_hw_console_getchar	2

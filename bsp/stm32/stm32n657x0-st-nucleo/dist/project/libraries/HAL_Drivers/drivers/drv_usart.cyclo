@@ -1,8 +1,0 @@
-libraries\HAL_Drivers\drivers\drv_usart.c:360:12:stm32_getc	3
-libraries\HAL_Drivers\drivers\drv_usart.c:340:12:stm32_putc	4
-libraries\HAL_Drivers\drivers\drv_usart.c:382:19:stm32_dma_transmit	6
-libraries\HAL_Drivers\drivers\drv_usart.c:237:17:stm32_control	12
-libraries\HAL_Drivers\drivers\drv_usart.c:101:13:stm32_uart_get_mask	4
-libraries\HAL_Drivers\drivers\drv_usart.c:148:17:stm32_configure	5
-libraries\HAL_Drivers\drivers\drv_usart.c:546:6:USART1_IRQHandler	13
-libraries\HAL_Drivers\drivers\drv_usart.c:1263:5:rt_hw_usart_init	2
