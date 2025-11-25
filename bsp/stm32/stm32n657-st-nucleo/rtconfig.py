@@ -19,7 +19,7 @@ if  CROSS_TOOL == 'gcc':
     PLATFORM    = 'gcc'
     EXEC_PATH   = r'D:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin'
 elif CROSS_TOOL == 'keil':
-    PLATFORM    = 'armcc'
+    PLATFORM    = 'armclang'
     EXEC_PATH   = r'C:/Keil_v5'
 elif CROSS_TOOL == 'iar':
     PLATFORM    = 'iccarm'
@@ -44,7 +44,7 @@ if PLATFORM == 'gcc':
     OBJCPY = PREFIX + 'objcopy'
 
     DEVICE = ' -mcpu=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections'
-    CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  '
+    CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  -Wno-pointer-bool-conversion -Wno-tautological-compare'
     AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp -Wa,-mimplicit-it=thumb -DDEBUG '
     LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/linker_scripts/link_fsbl.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
 
@@ -72,7 +72,7 @@ elif PLATFORM == 'armcc':
     TARGET_EXT = 'axf'
 
     DEVICE = ' --cpu Cortex-M55.fp.sp'
-    CFLAGS = '-c ' + DEVICE + ' --apcs=interwork --c99'
+    CFLAGS = '-c ' + DEVICE + ' --apcs=interwork --gnu11 -Wno-pointer-bool-conversion -Wno-tautological-compare'
     AFLAGS = DEVICE + ' --apcs=interwork '
     LFLAGS = DEVICE + ' --scatter "board/CubeMX_Config/FSBL/stm32n657xx_axisram2_fsbl.sct" --info sizes --info totals --info unused --info veneers --list rtthread.map --strict'
     CFLAGS += ' -I' + EXEC_PATH + '/ARM/ARMCC/include'
@@ -106,7 +106,7 @@ elif PLATFORM == 'armclang':
     DEVICE = ' --cpu Cortex-M55.fp.sp '
     CFLAGS = ' --target=arm-arm-none-eabi -mcpu=cortex-M7 '
     CFLAGS += ' -mcpu=cortex-M7 -mfpu=fpv4-sp-d16 '
-    CFLAGS += ' -mfloat-abi=hard -c -fno-rtti -funsigned-char -fshort-enums -fshort-wchar '
+    CFLAGS += ' -mfloat-abi=hard -c -fno-rtti -funsigned-char -fshort-enums -fshort-wchar -Wno-pointer-bool-conversion -Wno-tautological-compare'
     CFLAGS += ' -gdwarf-3 -ffunction-sections '
     AFLAGS = DEVICE + ' --apcs=interwork '
     LFLAGS = DEVICE + ' --info sizes --info totals --info unused --info veneers '
@@ -124,7 +124,7 @@ elif PLATFORM == 'armclang':
         CFLAGS += ' -O2'
         
     CXXFLAGS = CFLAGS
-    CFLAGS += ' -std=c99'
+    CFLAGS += ' -std=gnu11'
 
     POST_ACTION = 'fromelf --bin $TARGET --output rtthread.bin \nfromelf -z $TARGET'
 

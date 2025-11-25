@@ -9,7 +9,7 @@ list = os.listdir(cwd)
 
 # STM32N657xx
 # You can select chips from the list above
-env.Append(CPPDEFINES = ['STM32N657xx'])
+env.Append(CPPDEFINES = ['STM32N657xx', 'USE_HAL_DRIVER'])
 
 for d in list:
     path = os.path.join(cwd, d)
