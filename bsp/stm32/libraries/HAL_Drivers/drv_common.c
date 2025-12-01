@@ -205,7 +205,9 @@ rt_weak void rt_hw_board_init(void)
     HAL_Init();
 
     /* System clock initialization */
+#ifndef SOC_SERIES_STM32N6
     SystemClock_Config();
+#endif
 
 #if defined(RT_USING_HEAP)
     /* Heap initialization */

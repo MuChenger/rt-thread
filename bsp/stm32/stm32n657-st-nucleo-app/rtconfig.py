@@ -2,8 +2,8 @@ import os
 
 # toolchains options
 ARCH='arm'
-CPU='cortex-m7'
-CROSS_TOOL='keil'
+CPU='cortex-m85'
+CROSS_TOOL='gcc'
 
 # bsp lib config
 BSP_LIBRARY_TYPE = None
@@ -104,8 +104,8 @@ elif PLATFORM == 'armclang':
     TARGET_EXT = 'axf'
 
     DEVICE = ' --cpu Cortex-M55.fp.sp '
-    CFLAGS = ' --target=arm-arm-none-eabi -mcpu=cortex-M7 '
-    CFLAGS += ' -mcpu=cortex-M7 -mfpu=fpv4-sp-d16 '
+    CFLAGS = ' --target=arm-arm-none-eabi -mcpu=cortex-M55 '
+    CFLAGS += ' -mcpu=cortex-M55 -mfpu=fpv4-sp-d16 '
     CFLAGS += ' -mfloat-abi=hard -c -fno-rtti -funsigned-char -fshort-enums -fshort-wchar -Wno-pointer-bool-conversion -Wno-tautological-compare'
     CFLAGS += ' -gdwarf-3 -ffunction-sections '
     AFLAGS = DEVICE + ' --apcs=interwork '
@@ -149,7 +149,7 @@ elif PLATFORM == 'iccarm':
     CFLAGS += ' --no_clustering'
     CFLAGS += ' --no_scheduling'
     CFLAGS += ' --endian=little'
-    CFLAGS += ' --cpu=Cortex-M7' 
+    CFLAGS += ' --cpu=Cortex-M55' 
     CFLAGS += ' -e' 
     CFLAGS += ' --fpu=VFPv5_sp'
     CFLAGS += ' --dlib_config "' + EXEC_PATH + '/arm/INC/c/DLib_Config_Normal.h"'
@@ -159,7 +159,7 @@ elif PLATFORM == 'iccarm':
     AFLAGS += ' -s+' 
     AFLAGS += ' -w+' 
     AFLAGS += ' -r' 
-    AFLAGS += ' --cpu Cortex-M7' 
+    AFLAGS += ' --cpu Cortex-M55' 
     AFLAGS += ' --fpu VFPv5_sp' 
     AFLAGS += ' -S' 
     

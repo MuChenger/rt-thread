@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>-Wno-pointer-bool-conversion -Wno-tautological-compare</MiscControls>
-              <Define>USE_HAL_DRIVER, __STDC_LIMIT_MACROS, __CLK_TCK=RT_TICK_PER_SECOND, RT_USING_LIBC, __RTTHREAD__, RT_USING_ARMLIBC, STM32N657xx</Define>
+              <Define>__STDC_LIMIT_MACROS, USE_HAL_DRIVER, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, STM32N657xx, RT_USING_LIBC, RT_USING_ARMLIBC</Define>
               <Undefine></Undefine>
-              <IncludePath>board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\..\..\components\libc\compilers\common\extension;..\libraries\HAL_Drivers\drivers;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;..\..\..\components\drivers\include;..\libraries\HAL_Drivers\drivers\config;..\..\..\include;..\..\..\components\libc\posix\io\eventfd;board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\..\..\components\finsh;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\poll;..\libraries\HAL_Drivers;..\..\..\components\drivers\include;..\..\..\components\drivers\phy;..\..\..\components\drivers\smp_call;..\..\..\components\libc\posix\ipc;..\..\..\components\libc\compilers\common\include;..\..\..\components\net\utest;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\libcpu\arm\cortex-m7;..\..\..\components\drivers\include;..\..\..\libcpu\arm\common;.;..\..\..\components\drivers\include;applications;board;board\CubeMX_Config\FSBL\Inc;..\..\..\components\libc\posix\io\epoll;board\CubeMX_Config\Drivers\CMSIS\Include</IncludePath>
+              <IncludePath>applications;..\..\..\components\libc\posix\io\eventfd;board\CubeMX_Config\Drivers\CMSIS\Include;..\..\..\components\drivers\include;..\..\..\components\drivers\smp_call;board\app;board;board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\..\..\components\libc\posix\io\epoll;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\drivers\phy;..\..\..\libcpu\arm\cortex-m85;..\libraries\HAL_Drivers\drivers;..\..\..\components\libc\posix\io\poll;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;..\..\..\components\libc\posix\ipc;.;..\libraries\HAL_Drivers;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\..\..\components\finsh;..\..\..\include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\libcpu\arm\common;..\libraries\HAL_Drivers\drivers\config;..\..\..\components\drivers\include;board\CubeMX_Config\FSBL\Inc;..\..\..\components\libc\compilers\common\include;..\..\..\components\drivers\include;..\..\..\components\net\utest;..\..\..\components\libc\compilers\common\extension</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -371,7 +371,7 @@
             <TextAddressRange></TextAddressRange>
             <DataAddressRange></DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\board\CubeMX_Config\MDK-ARM\FSBL\stm32n657xx_axisram2_fsbl.sct</ScatterFile>
+            <ScatterFile>.\board\linker_scripts\link_app.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -412,17 +412,12 @@
             <File>
               <FileName>context_gcc.S</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\libcpu\arm\cortex-m7\context_gcc.S</FilePath>
-            </File>
-            <File>
-              <FileName>cpu_cache.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\libcpu\arm\cortex-m7\cpu_cache.c</FilePath>
+              <FilePath>..\..\..\libcpu\arm\cortex-m85\context_gcc.S</FilePath>
             </File>
             <File>
               <FileName>cpuport.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\libcpu\arm\cortex-m7\cpuport.c</FilePath>
+              <FilePath>..\..\..\libcpu\arm\cortex-m85\cpuport.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1187,14 +1182,14 @@
               <FilePath>board\CubeMX_Config\FSBL\Src\stm32n6xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>system_stm32n6xx_fsbl.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>board\CubeMX_Config\FSBL\Src\system_stm32n6xx_fsbl.c</FilePath>
-            </File>
-            <File>
               <FileName>startup_stm32n657xx_fsbl.c</FileName>
               <FileType>1</FileType>
               <FilePath>board\CubeMX_Config\MDK-ARM\startup_stm32n657xx_fsbl.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32n6xx_s.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>board\app\system_stm32n6xx_s.c</FilePath>
             </File>
             <File>
               <FileName>board.c</FileName>
@@ -1207,16 +1202,6 @@
           <GroupName>Finsh</GroupName>
           <Files>
             <File>
-              <FileName>msh.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\components\finsh\msh.c</FilePath>
-            </File>
-            <File>
-              <FileName>msh_parse.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\components\finsh\msh_parse.c</FilePath>
-            </File>
-            <File>
               <FileName>cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\finsh\cmd.c</FilePath>
@@ -1225,6 +1210,16 @@
               <FileName>shell.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\finsh\shell.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\finsh\msh.c</FilePath>
+            </File>
+            <File>
+              <FileName>msh_parse.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\finsh\msh_parse.c</FilePath>
             </File>
           </Files>
         </Group>

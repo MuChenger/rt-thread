@@ -116,7 +116,7 @@ config SOC_SERIES_STM32WB
 
 config SOC_SERIES_STM32N6
     bool
-    select ARCH_ARM_CORTEX_M7
+    select ARCH_ARM_CORTEX_M85
     select SOC_FAMILY_STM32
     select PKG_USING_STM32N6_HAL_DRIVER
 

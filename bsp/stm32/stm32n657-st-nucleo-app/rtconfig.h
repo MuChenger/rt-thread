@@ -104,12 +104,11 @@
 #define RT_VER_NUM 0x50201
 #define RT_BACKTRACE_LEVEL_MAX_NR 32
 /* end of RT-Thread Kernel */
-#define RT_USING_CACHE
 #define RT_USING_HW_ATOMIC
 #define RT_USING_CPU_FFS
 #define ARCH_ARM
 #define ARCH_ARM_CORTEX_M
-#define ARCH_ARM_CORTEX_M7
+#define ARCH_ARM_CORTEX_M85
 
 /* RT-Thread Components */
 
@@ -282,10 +281,6 @@
 
 /* STM32 HAL & SDK Drivers */
 
-#define PKG_USING_STM32H7_HAL_DRIVER
-#define PKG_USING_STM32H7_HAL_DRIVER_LATEST_VERSION
-#define PKG_USING_STM32H7_CMSIS_DRIVER
-#define PKG_USING_STM32H7_CMSIS_DRIVER_LATEST_VERSION
 /* end of STM32 HAL & SDK Drivers */
 
 /* Infineon HAL Packages */
@@ -319,6 +314,10 @@
 /* GD32 Drivers */
 
 /* end of GD32 Drivers */
+
+/* HPMicro SDK */
+
+/* end of HPMicro SDK */
 /* end of HAL & SDK Drivers */
 
 /* sensors drivers */
