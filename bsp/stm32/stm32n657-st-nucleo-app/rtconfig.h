@@ -139,9 +139,40 @@
 
 #define RT_USING_DEVICE_IPC
 #define RT_UNAMED_PIPE_NUMBER 64
+#define RT_USING_SYSTEM_WORKQUEUE
+#define RT_SYSTEM_WORKQUEUE_STACKSIZE 2048
+#define RT_SYSTEM_WORKQUEUE_PRIORITY 23
 #define RT_USING_SERIAL
-#define RT_USING_SERIAL_V1
-#define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_SERIAL_V2
+#define RT_SERIAL_BUF_STRATEGY_OVERWRITE
+#define RT_USING_SPI
+#define RT_USING_SPI_ISR
+#define RT_USING_WIFI
+#define RT_WLAN_DEVICE_STA_NAME "wlan0"
+#define RT_WLAN_DEVICE_AP_NAME "wlan1"
+#define RT_WLAN_SSID_MAX_LENGTH 32
+#define RT_WLAN_PASSWORD_MAX_LENGTH 32
+#define RT_WLAN_DEV_EVENT_NUM 2
+#define RT_WLAN_MANAGE_ENABLE
+#define RT_WLAN_SCAN_WAIT_MS 10000
+#define RT_WLAN_CONNECT_WAIT_MS 10000
+#define RT_WLAN_SCAN_SORT
+#define RT_WLAN_MSH_CMD_ENABLE
+#define RT_WLAN_JOIN_SCAN_BY_MGNT
+#define RT_WLAN_AUTO_CONNECT_ENABLE
+#define AUTO_CONNECTION_PERIOD_MS 2000
+#define RT_WLAN_CFG_ENABLE
+#define RT_WLAN_CFG_INFO_MAX 3
+#define RT_WLAN_PROT_ENABLE
+#define RT_WLAN_PROT_NAME_LEN 8
+#define RT_WLAN_PROT_MAX 2
+#define RT_WLAN_DEFAULT_PROT "lwip"
+#define RT_WLAN_PROT_LWIP_ENABLE
+#define RT_WLAN_PROT_LWIP_NAME "lwip"
+#define RT_WLAN_WORK_THREAD_ENABLE
+#define RT_WLAN_WORKQUEUE_THREAD_NAME "wlan"
+#define RT_WLAN_WORKQUEUE_THREAD_SIZE 2048
+#define RT_WLAN_WORKQUEUE_THREAD_PRIO 15
 #define RT_USING_PIN
 /* end of Device Drivers */
 
@@ -172,6 +203,66 @@
 
 /* Network */
 
+#define RT_USING_SAL
+#define SAL_INTERNET_CHECK
+#define SOCKET_TABLE_STEP_LEN 4
+
+/* Docking with protocol stacks */
+
+#define SAL_USING_LWIP
+/* end of Docking with protocol stacks */
+#define SAL_SOCKETS_NUM 16
+#define RT_USING_NETDEV
+#define NETDEV_USING_IFCONFIG
+#define NETDEV_USING_PING
+#define NETDEV_USING_NETSTAT
+#define NETDEV_USING_AUTO_DEFAULT
+#define NETDEV_IPV4 1
+#define NETDEV_IPV6 0
+#define RT_USING_LWIP
+#define RT_USING_LWIP203
+#define RT_USING_LWIP_VER_NUM 0x20003
+#define RT_LWIP_MEM_ALIGNMENT 4
+#define RT_LWIP_IGMP
+#define RT_LWIP_ICMP
+#define RT_LWIP_DNS
+#define RT_LWIP_DHCP
+#define IP_SOF_BROADCAST 1
+#define IP_SOF_BROADCAST_RECV 1
+
+/* Static IPv4 Address */
+
+#define RT_LWIP_IPADDR "192.168.1.30"
+#define RT_LWIP_GWADDR "192.168.1.1"
+#define RT_LWIP_MSKADDR "255.255.255.0"
+/* end of Static IPv4 Address */
+#define RT_LWIP_UDP
+#define RT_LWIP_TCP
+#define RT_LWIP_RAW
+#define RT_MEMP_NUM_NETCONN 8
+#define RT_LWIP_PBUF_NUM 16
+#define RT_LWIP_RAW_PCB_NUM 4
+#define RT_LWIP_UDP_PCB_NUM 4
+#define RT_LWIP_TCP_PCB_NUM 4
+#define RT_LWIP_TCP_SEG_NUM 40
+#define RT_LWIP_TCP_SND_BUF 8196
+#define RT_LWIP_TCP_WND 8196
+#define RT_LWIP_TCPTHREAD_PRIORITY 10
+#define RT_LWIP_TCPTHREAD_MBOX_SIZE 8
+#define RT_LWIP_TCPTHREAD_STACKSIZE 1024
+#define RT_LWIP_ETHTHREAD_PRIORITY 12
+#define RT_LWIP_ETHTHREAD_STACKSIZE 1024
+#define RT_LWIP_ETHTHREAD_MBOX_SIZE 8
+#define LWIP_NETIF_STATUS_CALLBACK 1
+#define LWIP_NETIF_LINK_CALLBACK 1
+#define RT_LWIP_NETIF_NAMESIZE 6
+#define SO_REUSE 1
+#define LWIP_SO_RCVTIMEO 1
+#define LWIP_SO_SNDTIMEO 1
+#define LWIP_SO_RCVBUF 1
+#define LWIP_SO_LINGER 0
+#define LWIP_NETIF_LOOPBACK 0
+#define RT_LWIP_USING_PING
 /* end of Network */
 
 /* Memory protection */
@@ -180,6 +271,21 @@
 
 /* Utilities */
 
+#define RT_USING_ULOG
+#define ULOG_OUTPUT_LVL_D
+#define ULOG_OUTPUT_LVL 7
+#define ULOG_ASSERT_ENABLE
+#define ULOG_LINE_BUF_SIZE 128
+
+/* log format */
+
+#define ULOG_USING_COLOR
+#define ULOG_OUTPUT_TIME
+#define ULOG_TIME_USING_TIMESTAMP
+#define ULOG_OUTPUT_LEVEL
+#define ULOG_OUTPUT_TAG
+/* end of log format */
+#define ULOG_BACKEND_USING_CONSOLE
 /* end of Utilities */
 
 /* Using USB legacy version */
@@ -205,6 +311,16 @@
 /* Wiced WiFi */
 
 /* end of Wiced WiFi */
+#define PKG_USING_RW007
+#define PKG_USING_RW007_V210
+#define RW007_USING_STM32_DRIVERS
+#define RW007_SPI_MAX_HZ 8000000
+#define RW007_SPI_BUS_NAME "spi5"
+#define RW007_CS_PIN 48
+#define RW007_BOOT0_PIN 79
+#define RW007_BOOT1_PIN 48
+#define RW007_INT_BUSY_PIN 64
+#define RW007_RST_PIN 60
 
 /* CYW43012 WiFi */
 
@@ -409,8 +525,11 @@
 
 #define BSP_USING_GPIO
 #define BSP_USING_UART
-#define BSP_STM32_UART_V1_TX_TIMEOUT 6000
 #define BSP_USING_UART1
+#define BSP_UART1_RX_BUFSIZE 256
+#define BSP_UART1_TX_BUFSIZE 0
+#define BSP_USING_SPI
+#define BSP_USING_SPI5
 /* end of On-chip Peripheral Drivers */
 
 /* Board extended module Drivers */

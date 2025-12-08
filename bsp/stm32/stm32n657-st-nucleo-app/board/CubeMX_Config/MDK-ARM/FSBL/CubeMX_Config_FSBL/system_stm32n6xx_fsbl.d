@@ -20,5 +20,7 @@ cubemx_config_fsbl/system_stm32n6xx_fsbl.o: \
   ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_exti.h \
   ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_pwr.h \
   ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_pwr_ex.h \
+  ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_spi.h \
+  ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_spi_ex.h \
   ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart.h \
   ..\..\Drivers\STM32N6xx_HAL_Driver\Inc\stm32n6xx_hal_uart_ex.h

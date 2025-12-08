@@ -40,7 +40,8 @@ struct dma_config {
 #endif
 
 #if defined(SOC_SERIES_STM32L4) || defined(SOC_SERIES_STM32WL)  || defined(SOC_SERIES_STM32G0) || defined(SOC_SERIES_STM32G4)\
-    || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32WB) || defined(SOC_SERIES_STM32L5)
+    || defined(SOC_SERIES_STM32H7) || defined(SOC_SERIES_STM32MP1) || defined(SOC_SERIES_STM32WB) || defined(SOC_SERIES_STM32L5) \
+    || defined(SOC_SERIES_STM32N6)
     rt_uint32_t request;
 #endif
 };
