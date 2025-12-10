@@ -149,6 +149,7 @@
 #define RT_USING_SPI
 #define RT_USING_SPI_ISR
 #define RT_USING_PIN
+#define RT_USING_HWTIMER
 /* end of Device Drivers */
 
 /* C/C++ and POSIX layer */
@@ -441,6 +442,8 @@
 #define BSP_USING_PWM1_CH2
 #define BSP_USING_PWM1_CH3
 #define BSP_USING_PWM1_CH4
+#define BSP_USING_TIM
+#define BSP_USING_TIM2
 /* end of On-chip Peripheral Drivers */
 
 /* Board extended module Drivers */

@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>-Wno-pointer-bool-conversion -Wno-tautological-compare</MiscControls>
-              <Define>__STDC_LIMIT_MACROS, RT_USING_ARMLIBC, USE_HAL_DRIVER, STM32N657xx, __CLK_TCK=RT_TICK_PER_SECOND, __RTTHREAD__, RT_USING_LIBC</Define>
+              <Define>RT_USING_ARMLIBC, __STDC_LIMIT_MACROS, __RTTHREAD__, STM32N657xx, USE_HAL_DRIVER, RT_USING_LIBC, __CLK_TCK=RT_TICK_PER_SECOND</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\libcpu\arm\common;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;board;..\..\..\components\drivers\include;applications;..\..\..\components\drivers\phy;..\..\..\components\drivers\include;..\..\..\components\utilities\ulog;..\libraries\HAL_Drivers\drivers\config;..\..\..\components\libc\compilers\common\extension;..\..\..\components\libc\posix\io\epoll;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\posix\ipc;packages\CMSIS-Core-latest\Include;.;board\CubeMX_Config\Drivers\CMSIS\Include;..\libraries\HAL_Drivers\drivers;..\libraries\HAL_Drivers;..\..\..\components\drivers\spi;..\..\..\components\drivers\smp_call;board\app;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\net\utest;..\..\..\components\drivers\include;..\..\..\include;..\..\..\components\libc\compilers\common\include;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\poll;..\..\..\libcpu\arm\cortex-m85;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\..\..\components\finsh;..\..\..\components\libc\posix\io\eventfd;..\..\..\components\drivers\include;board\CubeMX_Config\FSBL\Inc</IncludePath>
+              <IncludePath>..\..\..\include;..\..\..\components\utilities\ulog;board\app;board;..\..\..\components\drivers\spi;board\CubeMX_Config\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\..\..\components\libc\compilers\common\extension\fcntl\octal;..\..\..\components\libc\posix\io\poll;applications;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\net\utest;..\..\..\components\drivers\smp_call;..\..\..\components\libc\compilers\common\extension;.;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc;..\libraries\HAL_Drivers\drivers\config;packages\CMSIS-Core-latest\Include;..\libraries\HAL_Drivers\drivers;..\..\..\components\drivers\include;board\CubeMX_Config\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\..\..\components\drivers\include;..\..\..\components\drivers\include;..\..\..\components\libc\posix\io\epoll;..\..\..\components\drivers\include;..\libraries\HAL_Drivers;..\..\..\components\finsh;..\..\..\components\libc\posix\io\eventfd;board\CubeMX_Config\FSBL\Inc;..\..\..\libcpu\arm\cortex-m85;..\..\..\components\drivers\phy;..\..\..\components\libc\compilers\common\include;..\..\..\components\libc\posix\ipc;..\..\..\components\drivers\include;..\..\..\components\drivers\include;board\CubeMX_Config\Drivers\CMSIS\Include;..\..\..\libcpu\arm\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -428,6 +428,62 @@
               <FileName>device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\components\drivers\core\device.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>0</AlwaysBuild>
+                  <GenerateAssemblyFile>0</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>0</AssembleAssemblyFile>
+                  <PublicsOnly>0</PublicsOnly>
+                  <StopOnExitCode>3</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <uGnu>2</uGnu>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                    <VariousControls>
+                      <MiscControls> </MiscControls>
+                      <Define>__RT_IPC_SOURCE__</Define>
+                      <Undefine> </Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>hwtimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\components\drivers\hwtimer\hwtimer.c</FilePath>
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
