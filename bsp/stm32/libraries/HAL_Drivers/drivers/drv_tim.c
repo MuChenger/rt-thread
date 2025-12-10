@@ -87,9 +87,11 @@ void stm32_tim_pclkx_doubler_get(rt_uint32_t *pclk1_doubler, rt_uint32_t *pclk2_
 
     RT_ASSERT(pclk1_doubler != RT_NULL);
     RT_ASSERT(pclk1_doubler != RT_NULL);
-
+#if defined(SOC_SERIES_STM32N6)
+    HAL_RCC_GetClockConfig(&RCC_ClkInitStruct);
+#else
     HAL_RCC_GetClockConfig(&RCC_ClkInitStruct, &flatency);
-
+#endif
     *pclk1_doubler = 1;
     *pclk2_doubler = 1;
 

@@ -198,7 +198,7 @@ static rt_err_t stm32_spi_init(struct stm32_spi *spi_drv, struct rt_spi_configur
         spi_handle->Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
     }
 
-    rt_kprintf("sys freq: %d, pclk freq: %d, SPI limiting freq: %d, SPI usage freq: %d",
+    LOG_D("sys freq: %d, pclk freq: %d, SPI limiting freq: %d, SPI usage freq: %d",
 #if defined(SOC_SERIES_STM32MP1)
           HAL_RCC_GetSystemCoreClockFreq(),
 #else
@@ -539,7 +539,6 @@ static rt_err_t spi_configure(struct rt_spi_device *device,
 
     struct stm32_spi *spi_drv =  rt_container_of(device->bus, struct stm32_spi, spi_bus);
     spi_drv->cfg = configuration;
-    rt_kprintf("@spi_configure\n");
 
     return stm32_spi_init(spi_drv, configuration);
 }
