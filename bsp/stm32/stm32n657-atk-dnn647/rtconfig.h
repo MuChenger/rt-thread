@@ -1,8 +1,8 @@
 #ifndef RT_CONFIG_H__
 #define RT_CONFIG_H__
 
-#define SOC_STM32N657
-#define BOARD_STM32N657X0_NUCLEO
+#define SOC_STM32N647
+#define BOARD_STM32N647X0_ATK_DNN647
 
 /* RT-Thread Kernel */
 
@@ -421,7 +421,6 @@
 /* end of RT-Thread online packages */
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32N6
-#define BOARD_SERIES_STM32_NUCLEO_144
 
 /* Hardware Drivers Config */
 

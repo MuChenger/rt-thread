@@ -6,16 +6,16 @@ RTT_DIR := ../../..
 
 PKGS_DIR := packages
 
-config SOC_STM32N657
+config SOC_STM32N647
     bool
     select SOC_SERIES_STM32N6
     select RT_USING_COMPONENTS_INIT
     select RT_USING_USER_MAIN
     default y
 
-config BOARD_STM32N657X0_NUCLEO
+config BOARD_STM32N647X0_ATK_DNN647
     bool
-    select BOARD_SERIES_STM32_NUCLEO_144
+    select BOARD_SERIES_STM32_ATK_144
     default y
 
 source "$(RTT_DIR)/Kconfig"

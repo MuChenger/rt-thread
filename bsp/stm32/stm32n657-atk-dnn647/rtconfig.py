@@ -44,9 +44,9 @@ if PLATFORM == 'gcc':
     OBJCPY = PREFIX + 'objcopy'
 
     DEVICE = ' -mcpu=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections'
-    CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N657xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  -Wno-pointer-bool-conversion -Wno-tautological-compare'
+    CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N647xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  -Wno-pointer-bool-conversion -Wno-tautological-compare'
     AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp -Wa,-mimplicit-it=thumb -DDEBUG '
-    LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/linker_scripts/link_app.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
+    LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/linker_scripts/STM32N647X0HXQ_ROMxspi2_RAMxspi1.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
 
     CPATH = ''
     LPATH = ''
@@ -74,7 +74,7 @@ elif PLATFORM == 'armcc':
     DEVICE = ' --cpu Cortex-M55.fp.sp'
     CFLAGS = '-c ' + DEVICE + ' --apcs=interwork --gnu11 -Wno-pointer-bool-conversion -Wno-tautological-compare'
     AFLAGS = DEVICE + ' --apcs=interwork '
-    LFLAGS = DEVICE + ' --scatter "board/CubeMX_Config/FSBL/stm32n657xx_axisram2_fsbl.sct" --info sizes --info totals --info unused --info veneers --list rtthread.map --strict'
+    LFLAGS = DEVICE + ' --scatter "board/linker_scripts/link_app.sct" --info sizes --info totals --info unused --info veneers --list rtthread.map --strict'
     CFLAGS += ' -I' + EXEC_PATH + '/ARM/ARMCC/include'
     LFLAGS += ' --libpath=' + EXEC_PATH + '/ARM/ARMCC/lib'
 
@@ -111,7 +111,7 @@ elif PLATFORM == 'armclang':
     AFLAGS = DEVICE + ' --apcs=interwork '
     LFLAGS = DEVICE + ' --info sizes --info totals --info unused --info veneers '
     LFLAGS += ' --list rt-thread.map '
-    LFLAGS += r' --strict --scatter "board/CubeMX_Config/FSBL/stm32n657xx_axisram2_fsbl.sct" '
+    LFLAGS += r' --strict --scatter "board/linker_scripts/link_app.sct" '
     CFLAGS += ' -I' + EXEC_PATH + '/ARM/ARMCLANG/include'
     LFLAGS += ' --libpath=' + EXEC_PATH + '/ARM/ARMCLANG/lib'
 

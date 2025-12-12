@@ -6,27 +6,29 @@ cwd = GetCurrentDir()
 
 # add the general drivers.
 src = Glob('board.c')
-src += Glob('app/system_stm32n6xx_s.c')  
-src += Glob('CubeMX_Config/FSBL/Src/stm32n6xx_hal_msp.c')
+src += Glob('CubeMX_Config/Appli/Core/Src/stm32n6xx_hal_msp.c')
+src += Glob('CubeMX_Config/Appli/Core/Src/system_stm32n6xx_s.c')
+src += Glob('CubeMX_Config/Appli/Core/Src/secure_nsc.c')
 src += Glob('CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src/*.c')
 
 if rtconfig.PLATFORM in ['gcc']:
-    src += Glob('startup_stm32n657xx_fsbl.s')
+    src += Glob('startup_stm32n647x0hxq_fsbl.s')
 
 if rtconfig.PLATFORM in ['armcc', 'armclang']:
-    src += Glob('CubeMX_Config/MDK-ARM/startup_stm32n657xx_fsbl.c')
+    src += Glob('CubeMX_Config/MDK-ARM/startup_stm32n647xx_fsbl.c')
 
 path = [cwd]
 path += [cwd + '/app']
-path += [cwd + '/CubeMX_Config/FSBL/Inc']
+path += [cwd + '/CubeMX_Config/Appli/Core/Inc']
+path += [cwd + '/CubeMX_Config/Secure_nsclib']
 path += [cwd + '/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Inc']
 path += [cwd + '/CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Inc/Legacy']
 path += [cwd + '/CubeMX_Config/Drivers/CMSIS/Include']
 path += [cwd + '/CubeMX_Config/Drivers/CMSIS/Device/ST/STM32N6xx/Include']
 
-# STM32N657xx
+# STM32N647xx
 # You can select chips from the list above
-CPPDEFINES = ['STM32N657xx']
+CPPDEFINES = ['STM32N647xx']
 
 group = DefineGroup('Drivers', src, depend = [''], CPPPATH = path)
 list = os.listdir(cwd)
