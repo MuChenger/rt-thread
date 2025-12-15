@@ -12,7 +12,7 @@ src += Glob('CubeMX_Config/Appli/Core/Src/secure_nsc.c')
 src += Glob('CubeMX_Config/Drivers/STM32N6xx_HAL_Driver/Src/*.c')
 
 if rtconfig.PLATFORM in ['gcc']:
-    src += Glob('startup_stm32n647x0hxq_fsbl.s')
+    src += Glob('startup_stm32n647x0hxq.s')
 
 if rtconfig.PLATFORM in ['armcc', 'armclang']:
     src += Glob('CubeMX_Config/MDK-ARM/startup_stm32n647xx_fsbl.c')

@@ -30,13 +30,28 @@ SourceFiles=Appli\Core\Src\main.c;Appli\Core\Src\stm32n6xx_it.c;Appli\Core\Src\s
 HeaderPath=Drivers\STM32N6xx_HAL_Driver\Inc;Drivers\CMSIS\Device\ST\STM32N6xx\Include;Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;Drivers\CMSIS\Include;Appli\Core\Inc;Secure_nsclib;
 CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;
 
-[FSBL:PreviousGenFiles]
-SourceFiles=;
-
 [FSBL:PreviousUsedKeilFiles]
 SourceFiles=..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;;;
 HeaderPath=..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;
 CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;
+
+[Appli:PreviousUsedKeilFiles]
+SourceFiles=..\Appli\Core\Src\main.c;..\Appli\Core\Src\stm32n6xx_it.c;..\Appli\Core\Src\stm32n6xx_hal_msp.c;..\Appli\Core\Src\secure_nsc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;;;
+HeaderPath=..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;..\Appli\Core\Inc;..\Secure_nsclib;..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;
+CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;
+
+[ExtMemLoader:PreviousUsedKeilFiles]
+SourceFiles=..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;;;
+HeaderPath=..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;
+CDefines=STM32N647xx;
+
+[PreviousUsedKeilFiles]
+SourceFiles=..\Appli\Core\Src\main.c;..\Appli\Core\Src\stm32n6xx_it.c;..\Appli\Core\Src\stm32n6xx_hal_msp.c;..\Appli\Core\Src\secure_nsc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx_s.c;..\Src\system_stm32n6xx_s.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx_s.c;..\Src\system_stm32n6xx_s.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;..\FSBL\Core\Src\;..\Appli\Core\Src\system_stm32n6xx_s.c;..\ExtMemLoader\Core\Src\;;;
+HeaderPath=..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;..\Appli\Core\Inc;..\Secure_nsclib;
+CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;
+
+[FSBL:PreviousGenFiles]
+SourceFiles=;
 
 [Appli:PreviousGenFiles]
 AdvancedFolderStructure=true
@@ -59,18 +74,8 @@ SourceFolderListSize=1
 SourcePath#0=..\Appli\Core\Src
 SourceFiles=;
 
-[Appli:PreviousUsedKeilFiles]
-SourceFiles=..\Appli\Core\Src\main.c;..\Appli\Core\Src\stm32n6xx_it.c;..\Appli\Core\Src\stm32n6xx_hal_msp.c;..\Appli\Core\Src\secure_nsc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;;;
-HeaderPath=..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;..\Appli\Core\Inc;..\Secure_nsclib;..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;
-CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;
-
 [ExtMemLoader:PreviousGenFiles]
 SourceFiles=;
-
-[ExtMemLoader:PreviousUsedKeilFiles]
-SourceFiles=..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;;;
-HeaderPath=..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\CMSIS\Include;
-CDefines=STM32N647xx;
 
 [PreviousGenFiles]
 AdvancedFolderStructure=true
@@ -92,9 +97,4 @@ SourceFiles#3=..\Appli\Core\Src\secure_nsc.c
 SourceFolderListSize=1
 SourcePath#0=..\Appli\Core\Src
 SourceFiles=;
-
-[PreviousUsedKeilFiles]
-SourceFiles=..\Appli\Core\Src\main.c;..\Appli\Core\Src\stm32n6xx_it.c;..\Appli\Core\Src\stm32n6xx_hal_msp.c;..\Appli\Core\Src\secure_nsc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx_s.c;..\Src\system_stm32n6xx_s.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_cortex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_pwr_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rcc_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_gpio.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_dma_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_exti.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_rif.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_tim_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_uart_ex.c;..\Drivers\STM32N6xx_HAL_Driver\Src\stm32n6xx_hal_xspi.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx_s.c;..\Src\system_stm32n6xx_s.c;..\Drivers\CMSIS\Device\ST\STM32N6xx\Source\Templates\system_stm32n6xx.c;..\FSBL\Core\Src\;..\Appli\Core\Src\system_stm32n6xx_s.c;..\ExtMemLoader\Core\Src\;;;
-HeaderPath=..\Drivers\STM32N6xx_HAL_Driver\Inc;..\Drivers\CMSIS\Device\ST\STM32N6xx\Include;..\Drivers\STM32N6xx_HAL_Driver\Inc\Legacy;..\Drivers\CMSIS\Include;..\Appli\Core\Inc;..\Secure_nsclib;
-CDefines=USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;USE_HAL_DRIVER;USE_HAL_DRIVER;STM32N647xx;USE_HAL_DRIVER;
 

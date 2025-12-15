@@ -1,9 +1,8 @@
 /**
  ******************************************************************************
- * @file      startup_stm32n657xx.s
+ * @file      startup_stm32n647xx.s
  * @author    GPM Application Team
- * @brief     STM32N657XX device vector table for GCC toolchain.
- *            This startup file should be used for the FSBL (after bootROM execution).
+ * @brief     STM32N647XX device vector table for GCC toolchain.
  *            This module performs:
  *                - Set the initial SP
  *                - Set the initial PC == Reset_Handler,
@@ -120,7 +119,7 @@ Infinite_Loop:
 
 /******************************************************************************
 *
-* The STM32N657XX vector table.  Note that the proper constructs
+* The STM32N647XX vector table.  Note that the proper constructs
 * must be placed on this to ensure that it ends up at physical address
 * 0x0000.0000.
 *
@@ -164,7 +163,7 @@ g_pfnVectors:
   .word	0                          			/* Reserved                                                      */
   .word	RTC_IRQHandler             			/* RTC interrupt                                                 */
   .word	0                          			/* Reserved                                                      */
-  .word	IWDG_IRQHandler         		  	/* Independent watchdog interrupt                                */
+  .word	IWDG_IRQHandler         			/* Independent watchdog interrupt                                */
   .word	WWDG_IRQHandler         			/* Window watchdog interrupt                                     */
   .word	EXTI0_IRQHandler           			/* EXTI Line 0 interrupt through the EXTI line                   */
   .word	EXTI1_IRQHandler           			/* EXTI Line 1 interrupt through the EXTI line                   */
@@ -182,16 +181,16 @@ g_pfnVectors:
   .word	EXTI13_IRQHandler          			/* EXTI Line 13 interrupt                                        */
   .word	EXTI14_IRQHandler          			/* EXTI Line 14 interrupt                                        */
   .word	EXTI15_IRQHandler          			/* EXTI Line 15 interrupt                                        */
-  .word	SAES_IRQHandler            			/* SAES global interrupt                                         */
-  .word	CRYP_IRQHandler            			/* CRYP global interrupt                                         */
+  .word	0			            			/* Reserved	                                                     */
+  .word	0			            			/* Reserved	                                                     */
   .word	PKA_IRQHandler             			/* PKA global interrupt                                          */
   .word	HASH_IRQHandler            			/* HASH global interrupt                                         */
   .word	RNG_IRQHandler             			/* RNG global interrupt                                          */
   .word	0                          			/* Reserved                                                      */
-  .word	MCE1_IRQHandler            			/* MCE1 global interrupt                                         */
-  .word	MCE2_IRQHandler            			/* MCE2 global interrupt                                         */
-  .word	MCE3_IRQHandler            			/* MCE3 global interrupt                                         */
-  .word	MCE4_IRQHandler            			/* MCE4 global interrupt                                         */
+  .word	0			            			/* Reserved	                                                     */
+  .word	0			            			/* Reserved	                                                     */
+  .word	0			            			/* Reserved	                                                     */
+  .word	0			            			/* Reserved	                                                     */
   .word	ADC1_2_IRQHandler           		/* ADC1/ADC2 global interrupt                                    */
   .word	CSI_IRQHandler         			    /* CSI global interrupt                                          */
   .word	DCMIPP_IRQHandler          			/* DCMIPP global interrupt                                       */
@@ -294,9 +293,9 @@ g_pfnVectors:
   .word	MDF1_FLT3_IRQHandler       			/* MDF global Interrupt for Filter3                              */
   .word	MDF1_FLT4_IRQHandler       			/* MDF global Interrupt for Filter4                              */
   .word	MDF1_FLT5_IRQHandler       			/* MDF global Interrupt for Filter5                              */
-  .word	SAI1_A_IRQHandler   			    /* SAI1 global interrupt A                                       */
-  .word	SAI1_B_IRQHandler   	  		    /* SAI1 global interrupt B                                       */
-  .word	SAI2_A_IRQHandler   		  	    /* SAI2 global interrupt A                                       */
+  .word	SAI1_A_IRQHandler   	  		    /* SAI1 global interrupt A                                       */
+  .word	SAI1_B_IRQHandler   		  	    /* SAI1 global interrupt B                                       */
+  .word	SAI2_A_IRQHandler   			    /* SAI2 global interrupt A                                       */
   .word	SAI2_B_IRQHandler   			    /* SAI2 global interrupt B                                       */
   .word	SPDIFRX_IRQHandler         			/* SPDIFRX global interrupt                                      */
   .word	SPI1_IRQHandler            			/* SPI1 global interrupt A                                       */
@@ -324,14 +323,14 @@ g_pfnVectors:
   .word	SDMMC2_IRQHandler          			/* SDMMC2 global interrupt                                       */
   .word	UCPD1_IRQHandler            		/* UCPD global interrupt                                         */
   .word	USB1_OTG_HS_IRQHandler              /* USB OTG1 HS global interrupt                                  */
-  .word	USB2_OTG_HS_IRQHandler              /* USB OTG2 HS global interrupt                                  */
+  .word	USB2_OTG_HS_IRQHandler         	    /* USB OTG2 HS global interrupt                                  */
   .word	ETH1_IRQHandler            			/* Ethernet global interrupt                                     */
-  .word	FDCAN1_IT0_IRQHandler               /* FDCAN1 interrupt 0                                            */
   .word	FDCAN1_IT1_IRQHandler         	    /* FDCAN1 interrupt 1                                            */
   .word	FDCAN2_IT0_IRQHandler         	    /* FDCAN2 interrupt 0                                            */
-  .word	FDCAN2_IT1_IRQHandler         	    /* FDCAN2 interrupt 1                                            */
+  .word	FDCAN2_IT1_IRQHandler       		/* FDCAN2 interrupt 1                                            */
   .word	FDCAN3_IT0_IRQHandler         	    /* FDCAN3 interrupt 0                                            */
   .word	FDCAN3_IT1_IRQHandler         	    /* FDCAN3 interrupt 1                                            */
+  .word	FDCAN1_IT0_IRQHandler         	    /* FDCAN1 interrupt 0                                            */
   .word	FDCAN_CU_IRQHandler        			/* Clock calibration unit interrupt line(FDCAN1 only)            */
   .word	MDIOS_IRQHandler           			/* MDIOS global Interrupt                                        */
   .word	DCMI_PSSI_IRQHandler       			/* DCMI/PSSI global interrupt                                    */
@@ -422,7 +421,7 @@ g_pfnVectors:
 	.weak	RTC_IRQHandler
 	.thumb_set RTC_IRQHandler,Default_Handler
 
-	.weak	IWDG_IRQHandler
+	.weak	IWDF_IRQHandler
 	.thumb_set IWDG_IRQHandler,Default_Handler
 
 	.weak	WWDG_IRQHandler
@@ -476,12 +475,6 @@ g_pfnVectors:
 	.weak	EXTI15_IRQHandler
 	.thumb_set EXTI15_IRQHandler,Default_Handler
 
-	.weak	SAES_IRQHandler
-	.thumb_set SAES_IRQHandler,Default_Handler
-
-	.weak	CRYP_IRQHandler
-	.thumb_set CRYP_IRQHandler,Default_Handler
-
 	.weak	PKA_IRQHandler
 	.thumb_set PKA_IRQHandler,Default_Handler
 
@@ -490,18 +483,6 @@ g_pfnVectors:
 
 	.weak	RNG_IRQHandler
 	.thumb_set RNG_IRQHandler,Default_Handler
-
-	.weak	MCE1_IRQHandler
-	.thumb_set MCE1_IRQHandler,Default_Handler
-
-	.weak	MCE2_IRQHandler
-	.thumb_set MCE2_IRQHandler,Default_Handler
-
-	.weak	MCE3_IRQHandler
-	.thumb_set MCE3_IRQHandler,Default_Handler
-
-	.weak	MCE4_IRQHandler
-	.thumb_set MCE4_IRQHandler,Default_Handler
 
 	.weak	ADC1_2_IRQHandler
 	.thumb_set ADC1_2_IRQHandler,Default_Handler

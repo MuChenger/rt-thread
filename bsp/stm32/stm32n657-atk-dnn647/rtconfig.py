@@ -46,7 +46,7 @@ if PLATFORM == 'gcc':
     DEVICE = ' -mcpu=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections'
     CFLAGS = DEVICE + ' -Dgcc' + ' -DDEBUG -DUSE_HAL_DRIVER -DSTM32N647xx -DUSE_NUCLEO_64 -Wall -fstack-usage -fcyclomatic-complexity -mcmse  -Wno-pointer-bool-conversion -Wno-tautological-compare'
     AFLAGS = ' -c' + DEVICE + ' -x assembler-with-cpp -Wa,-mimplicit-it=thumb -DDEBUG '
-    LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/linker_scripts/STM32N647X0HXQ_ROMxspi2_RAMxspi1.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
+    LFLAGS = DEVICE + ' -mcpu=cortex-m55 -Wl,--gc-sections,-Map=rtthread.map,-cref -T board/linker_scripts/link_app.ld' + ' -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o  -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -Wl,--end-group'
 
     CPATH = ''
     LPATH = ''
